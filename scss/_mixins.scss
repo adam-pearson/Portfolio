@@ -105,3 +105,26 @@ box-shadow: $val;
 /*============================================
 ----------------------------------------------
 ============================================*/
+
+/* Burger button before & after */
+
+@mixin burger-pseudo-lines {
+    &::before {
+        content: "";
+        width: 33px;
+        height: 3px;
+        display: block;
+        background-color: $white;
+        position: absolute;
+        top: 8px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 33px;
+        height: 3px;
+        background-color: $white;
+        position: absolute;
+        top: 16px;
+    }
+}
