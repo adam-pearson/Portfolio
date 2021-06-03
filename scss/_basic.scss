@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: paralucent, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: paralucent, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-family: paralucent, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: roboto, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    strong {
+        font-weight: 500;
+        font-style: normal;
+    }
+}
+
+.strapline {
+    font-family: letter-gothic-std, monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.btn {
+    border-radius: 4px;
+    background-color: $primary-colour;
+    color: $white;
+    font-family: paralucent, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: .75rem;
+}
