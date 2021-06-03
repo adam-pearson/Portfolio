@@ -1,0 +1,107 @@
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin media-xs {
+    @media (max-width: #{$xs-width}) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media (min-width: #{$sm-width}) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (min-width: #{$md-width}) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (min-width: #{$lg-width}) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media (min-width: #{$xl-width}) {
+        @content;
+    }
+}
+
+/* perfectly centres an element relative to its parent (parent needs position: relative) */
+@mixin centred {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* generates a font awesome icon - put icon code in first argument, colour in second */
+@mixin generate-fontawesome-icon ($content, $color:null) {
+content: $content;
+font-family: $fontawesome-font-face;
+color: $color;
+font-weight: 900;
+}
+
+/*============================================
+-------------Cross-browser mixins-------------
+============================================*/
+
+
+@mixin border-radius($top, $right:null, $bottom:null, $left:null) {
+-moz-border-radius: $top $right $bottom $left;
+-webkit-border-radius: $top $right $bottom $left;
+border-radius: $top $right $bottom $left;
+}
+
+@mixin background-size($val) {
+-moz-background-size: $val!important;
+    -o-background-size: $val!important;
+    -webkit-background-size: $val!important;
+    background-size: $val!important;
+}
+
+@mixin border-image($val) {
+-webkit-border-image: $val;
+-o-border-image: $val;
+border-image: $val;
+}
+
+@mixin appearance($val) {
+-moz-appearance: $val;
+-webkit-appearance: $val;
+}
+
+@mixin transform($transforms) {
+-webkit-transform: $transforms;
+transform: $transforms;
+}
+
+@mixin animation($val) {
+-webkit-animation: $val;
+-moz-animation: $val;
+-o-animation: $val;
+animation: $val;
+}
+
+@mixin transition($val) {
+-webkit-transition: $val;
+transition: $val;
+}
+
+@mixin box-shadow($val) {
+-webkit-box-shadow: $val;
+box-shadow: $val;
+}
+
+/*============================================
+----------------------------------------------
+============================================*/
