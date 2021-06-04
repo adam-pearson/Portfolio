@@ -33,7 +33,7 @@
     position: relative;
     text-align: center;
     display: block;
-    background: url(/resources/img/IMG_1940-min.jpg);
+    background: url(resources/img/IMG_1940-min.jpg);
     background-size: cover;
     @include media-md {
         height: 100vh;
@@ -72,3 +72,5 @@
         transition: 150ms;
     }
 }
+
+
