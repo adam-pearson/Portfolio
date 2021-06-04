@@ -1,0 +1,51 @@
+.projects-section.container {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: center;
+    @include media-md {
+        flex: 1 45%;
+    }
+}
+
+.project {
+    padding-top: 40px;
+    color: $dark-grey-2;
+    h2 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 1.4rem;
+        transition: 150ms;
+    }
+    h3 {
+        margin: 0;
+        font-size: 1rem;
+        transition: 150ms;
+    }
+    i {
+        opacity: 0;
+    }
+    &:hover {
+        h2, h3 {
+            color: $primary-colour;
+        }
+        i {
+                -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        
+        }
+    }
+    .project-image-contain {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+

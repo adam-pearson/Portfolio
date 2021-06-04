@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: initial;
+}
+
 h1 {
     font-family: paralucent, sans-serif;
     font-weight: 600;
@@ -17,7 +22,7 @@ h2 {
     margin: 0.5em 0;
     &.strapline {
         font-family: letter-gothic-std, monospace;
-        font-weight: 400;
+        font-weight: 700;
         font-style: normal;
         font-size: 1.5rem;
     }
@@ -31,10 +36,17 @@ h3 {
     font-size: 1.25rem;
     &.strapline {
         font-family: letter-gothic-std, monospace;
-        font-weight: 400;
+        font-weight: 700;
         font-style: normal;
         font-size: 1.25rem;
     }
+}
+
+.strapline {
+    font-family: letter-gothic-std, monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
 }
 
 p {
