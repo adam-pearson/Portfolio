@@ -1,0 +1,24 @@
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    border-right: 1px solid $primary-colour;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: none;
+    @include media-md {
+        display: block;
+    }
+  }
+
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }

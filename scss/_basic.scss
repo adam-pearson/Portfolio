@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -49,7 +50,7 @@ h3 {
     font-size: 1rem;
 }
 
-p, input, textarea {
+p, input, textarea, label {
     font-family: roboto, sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -83,26 +84,45 @@ p, input, textarea {
 .container {
     width: 100%;
     margin: 0 auto;
+    @include media-md {
+        width: calc(100% - 80px);
+        margin-left: 80px;
+
+    }
 }
 
 .contact-field {
-    background-color: $light-grey;
-    border: none;
+    background-color: $white;
+    border: 1px solid $dark-grey-2;
     border-radius: 4px;
     width: 100%;
-    padding: 5px 15px;
+    padding: 5px 12px;
     color: $dark-grey;
     &:not(.message) {
         height: 50px;
     }
     &:focus {
         outline: none;
-        box-shadow: 0 0 2px 2px rgba(33,36,74,.2);
+        box-shadow: 0 0 2px 2px rgba(239,123,27,.42);
+        border: 1px solid $primary-colour;
+        ~ label {
+            color: $primary-colour;
+        }
     }
     &.message {
         padding-top: 10px;
     }
 }
+
+label {
+    font-size: .75rem;
+    &.required::after {
+        content: "*";
+        color: $primary-colour;
+    }
+}
+
+/* form autofill styles */
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -114,7 +134,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: $dark-grey;
-  box-shadow: 0 0 0px 1000px $light-grey inset;
-  -webkit-box-shadow: 0 0 0px 1000px $light-grey inset;
+  box-shadow: 0 0 0px 1000px $white inset;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset;
   transition: background-color 5000s ease-in-out 0s;
 }

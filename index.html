@@ -13,6 +13,13 @@
 </head>
 <body>
 
+    <!--------- Sidebar Nav --------->
+    <div class="sidebar">
+        <a href="/about">About Me</a>
+        <a href="/portfolio">My Portfolio</a>
+        <a href="/coding">Coding Examples</a>
+        <a href="/scion">SCS Scheme</a>
+    </div>
     <div class="whole-page container">
         <!--------- Header --------->
         <div id="top" class="header container">
@@ -141,15 +148,38 @@
                         tempor invidunt ut labore et dolore.</p>
                 </div>
                 <div class="contact-form-contain">
-                    <formgroup>
+                    <div class="contact-form formgroup">
                         <input class="contact-field" id="first-name" name="first-name" type="text">
+                        <label for="first-name" class="required">First name</label>
+                    </div>
+                    <div class="contact-form formgroup">
                         <input class="contact-field" id="last-name" name="last-name" type="text">
+                        <label for="last-name" class="required">Last name</label>
+                    </div>
+                    <div class="contact-form formgroup">
                         <input class="contact-field" id="email" name="email" type="email">
+                        <label for="email" class="required">Email</label>
+                    </div>
+                    <div class="contact-form formgroup">
                         <input class="contact-field" id="subject" name="subject" type="text" autocomplete="off">
+                        <label for="subject">Subject</label> 
+                    </div>
+                    <div class="contact-form formgroup">
                         <textarea class="contact-field message" id="message" name="message" rows="10" autocomplete="off"></textarea>
-                    </formgroup>
+                        <label for="first-name">Message</label>
+                    </div>  
+                    <div class="contact-form contact-button"><button class="btn btn-contact">Submit</div>
                 </div>
             </div>
+        </div>
+        <!------- Back to Top ------->
+        <div class="back-to-top">
+            <a href="#" class="scroll-up-link">
+                <div class="scroll-top">
+                    <i class="fas fa-chevron-up"></i>
+                    <p>Back to Top</p>
+                </div>
+            </a>
         </div>
     </div>
 </body>
