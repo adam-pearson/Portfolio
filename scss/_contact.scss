@@ -1,10 +1,37 @@
+.contact-section {
+    padding-top: 30px;
+}
+
 .contact-inner {
     display: flex;
     flex-direction: column;
-    padding-top: 15px;
-    padding-bottom: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px 15px 40px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-sm {
+        flex-direction: row;
+    }
+}
+
+.contact-form-contain {
+    display: flex;
+    flex-direction: column;
+    .contact-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        width: 100%;
+        .btn-contact {
+            width: 100%;
+            padding: 15px;
+            @include media-sm {
+                width: 35%;
+            }
+        }
+    }
+    @include media-sm {
+        width: 50%;
+    }
 }
 
 .contact-form {
@@ -12,14 +39,41 @@
     &:not(:first-child) {
         margin-top: 15px;
     }
+
 }
 
 .contact-text-contain {
     a > h2 {
         margin: 5px auto;
+        font-size: 1.15rem;
+        &:hover {
+            color: $primary-colour;
+        }
     }
     p {
         margin-top: 10px;
+    }
+    h2 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    @include media-sm {
+        max-width: 50%;
+        padding-right: 10px;
+        a > h2 {
+            font-size: 3.3vw;
+        }
+    }
+    @include media-md {
+        max-width: 50%;
+        a > h2 {
+            font-size: 1.2rem;
+        }
+    }
+    @include media-lg {
+        a > h2 {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -35,20 +89,7 @@
     }
 }
 
-.contact-form-contain {
-    display: flex;
-    flex-direction: column;
-    .contact-button {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 15px;
-        width: 100%;
-        .btn-contact {
-            width: 100%;
-            padding: 15px;
-        }
-    }
-}
+
 
 
 .back-to-top {

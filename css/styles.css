@@ -11,17 +11,6 @@
 /* Burger button before & after */
 /* Gradient animation */
 /* scroll animation */
-@keyframes animationFrames {
-  0% {
-    opacity: 0;
-    transform: translate(0px, -25px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
-}
-
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -44,7 +33,6 @@ h2 {
   font-weight: 600;
   font-style: normal;
   font-size: 1.5rem;
-  margin: 0.5em 0;
 }
 
 h2.strapline {
@@ -98,6 +86,7 @@ p strong, input strong, textarea strong, label strong {
   border-radius: 4px;
   padding: 10px 15px;
   cursor: pointer;
+  transition: .25s ease all;
 }
 
 .btn:hover {
@@ -120,6 +109,30 @@ p strong, input strong, textarea strong, label strong {
   }
 }
 
+@media (min-width: 768px) {
+  .inner {
+    width: 608px;
+  }
+}
+
+@media (min-width: 992px) {
+  .inner {
+    width: 820px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .inner {
+    width: 1060px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .inner {
+    width: 1240px;
+  }
+}
+
 .contact-field {
   background-color: #fff;
   border: 1px solid #3e3e3e;
@@ -135,7 +148,7 @@ p strong, input strong, textarea strong, label strong {
 
 .contact-field:focus {
   outline: none;
-  box-shadow: 0 0 2px 2px rgba(239, 123, 27, 0.42);
+  box-shadow: 0 0 2px 2px rgba(239, 123, 27, 0.1);
   border: 1px solid #ef7b1b;
 }
 
@@ -185,7 +198,7 @@ select:-webkit-autofill:focus {
 }
 
 /* Scroll up  button */
-@keyframes animationFrames {
+@keyframes UpanimationFrames {
   0% {
     opacity: 0;
     transform: translate(0px, 25px);
@@ -236,6 +249,82 @@ select:-webkit-autofill:focus {
   }
 }
 
+/* logo animation */
+@keyframes scale-logo {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes crossbar-anim {
+  0% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-10px, -10px);
+    -webkit-transform: translate(-10px, -10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+}
+
+@keyframes p-bowl-anim {
+  0% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, -10px);
+    -webkit-transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+}
+
+@keyframes a-foot-anim {
+  0% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+    -webkit-transform: translate(-10px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+}
+
+@keyframes stem-anim {
+  0% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+    -webkit-transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+}
+
 .sidebar {
   height: 100%;
   width: 160px;
@@ -245,8 +334,8 @@ select:-webkit-autofill:focus {
   left: 0;
   background-color: #fff;
   border-right: 1px solid #ef7b1b;
+  box-shadow: 3px 0 3px rgba(239, 123, 27, 0.1);
   overflow-x: hidden;
-  padding-top: 20px;
   display: none;
 }
 
@@ -256,12 +345,165 @@ select:-webkit-autofill:focus {
   }
 }
 
-.sidebar a {
-  padding: 6px 8px 6px 16px;
+.sidebar .nav-link, .sidebar .contact-link {
+  padding: 12px 16px 12px 16px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
   display: block;
+  text-align: center;
+  position: relative;
+}
+
+.sidebar .nav-link {
+  color: #3e3e3e;
+}
+
+.sidebar .nav-link:hover {
+  color: #ef7b1b;
+}
+
+.sidebar .contact-link {
+  transition: 0.3s ease all;
+}
+
+.sidebar .contact-link:hover {
+  color: #fff;
+}
+
+.sidebar-logo {
+  margin-bottom: 15px;
+}
+
+.sidebar-logo svg {
+  width: 100%;
+  padding: 16px;
+  height: 159px;
+}
+
+.sidebar-logo svg * {
+  transition: 0.3s ease all;
+  transform-origin: center center;
+}
+
+.sidebar-logo:hover #Crossbar {
+  animation: crossbar-anim .3s;
+}
+
+.sidebar-logo:hover #P_Bowl {
+  animation: p-bowl-anim .3s;
+}
+
+.sidebar-logo:hover #A_Foot {
+  animation: a-foot-anim .3s;
+}
+
+.sidebar-logo:hover #Stem {
+  animation: stem-anim .3s;
+}
+
+.sidebar-logo:hover .st1 {
+  animation: scale-logo .3s;
+  animation-delay: .35s;
+}
+
+.sidebar-logo:hover .st0 {
+  fill: #21244a;
+}
+
+.link-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+}
+
+/* sizes and styles the underline */
+.link-container .underline::after {
+  top: 100%;
+  height: 2px;
+  width: 0%;
+  left: 5%;
+  background-color: #ef7b1b;
+  transition: .3s ease all;
+}
+
+.link-container:hover .underline::after {
+  width: 90%;
+  transition: 0.3s ease all;
+}
+
+/* container for the contact nav button */
+.contact-container {
+  padding: 12px 16px 12px 16px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+  color: #3e3e3e;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.contact-container:hover {
+  color: #fff;
+}
+
+.contact-container {
+  padding: 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  border-top: 2px solid #ef7b1b;
+  border-bottom: 2px solid #ef7b1b;
+  margin: 20px 0;
+}
+
+.contact-container .underline::after {
+  top: 0;
+  height: 100%;
+  width: 0%;
+  left: 0%;
+  background-color: #ef7b1b;
+  transition: .3s ease all;
+}
+
+.contact-container:hover .underline::after {
+  color: #fff;
+  width: 100%;
+  transition: 0.3s ease all;
+  z-index: -1;
+}
+
+.social-links {
+  display: flex;
+  color: #ef7b1b;
+  padding: 0 15px;
+  font-size: 1.4rem;
+  justify-content: space-between;
+}
+
+.social-links a {
+  color: #ef7b1b;
+}
+
+.social-links a:hover {
+  color: #21244a;
 }
 
 .header.container {
@@ -374,7 +616,7 @@ select:-webkit-autofill:focus {
   left: 0;
   background: linear-gradient(305deg, #ef7a1b, #21254a, #f79235, #34325f, #484579, #5f5d98, #f7a850, #fabd6b, #ffffff);
   background-size: 1800% 1800%;
-  animation: gradientanimation 30s ease infinite;
+  animation: gradientanimation 45s ease infinite;
   mix-blend-mode: multiply;
   opacity: .65;
   z-index: 2;
@@ -428,6 +670,18 @@ select:-webkit-autofill:focus {
   text-shadow: 1px 1px 3px black;
 }
 
+@media (min-width: 992px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
 .scroll-down {
   position: absolute;
   top: 93%;
@@ -479,6 +733,8 @@ select:-webkit-autofill:focus {
 .projects-section.container {
   display: flex;
   justify-content: center;
+  padding-bottom: 40px;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.05);
 }
 
 .projects-inner {
@@ -487,32 +743,61 @@ select:-webkit-autofill:focus {
   padding-left: 15px;
   padding-right: 15px;
   justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .projects-inner {
-    flex: 1 45%;
-  }
+  justify-content: space-between;
 }
 
 .project {
   position: relative;
   padding-top: 40px;
+  overflow: hidden;
 }
 
 .project h2 {
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 1.6rem;
   transition: 250ms;
   color: #ef7b1b;
+  position: absolute;
+  bottom: 25px;
+}
+
+@media (min-width: 576px) {
+  .project h2 {
+    font-size: 2.25rem;
+    bottom: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project h2 {
+    font-size: 1.6rem;
+    bottom: 10px;
+    left: 15px;
+  }
 }
 
 .project h3 {
   margin: 0;
-  font-size: 1.2rem;
   transition: 250ms;
   color: #ef7b1b;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 5px;
+}
+
+@media (min-width: 576px) {
+  .project h3 {
+    font-size: 1.6rem;
+    opacity: 0;
+    bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project h3 {
+    font-size: 1.2rem;
+    left: 15px;
+  }
 }
 
 .project i {
@@ -521,11 +806,29 @@ select:-webkit-autofill:focus {
 
 .project:hover h2, .project:hover h3 {
   color: #ef7b1b;
-  text-shadow: 0 0 3px #ef7b1b;
+  text-shadow: 0 0 3px rgba(239, 123, 27, 0.5);
 }
 
 .project:hover i {
   animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@media (min-width: 576px) {
+  .project:hover h2 {
+    bottom: 35px;
+  }
+  .project:hover h3 {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .project:hover h2 {
+    bottom: 35px;
+  }
+  .project:hover h3 {
+    opacity: 1;
+  }
 }
 
 .project .project-image-contain {
@@ -541,44 +844,44 @@ select:-webkit-autofill:focus {
   bottom: 5px;
   left: 0px;
   padding: 10px 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .project .project-links {
+    position: initial;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .project {
+    width: 49%;
+  }
+}
+
+@media (min-width: 992px) {
+  .project {
+    width: 32%;
+  }
+}
+
+.contact-section {
+  padding-top: 30px;
 }
 
 .contact-inner {
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
-  padding-bottom: 40px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 15px 15px 40px 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact-form {
-  margin-top: 10px;
-}
-
-.contact-form:not(:first-child) {
-  margin-top: 15px;
-}
-
-.contact-text-contain a > h2 {
-  margin: 5px auto;
-}
-
-.contact-text-contain p {
-  margin-top: 10px;
-}
-
-.formgroup {
-  position: relative;
-}
-
-.formgroup label {
-  position: absolute;
-  top: -6px;
-  left: 11px;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: #fff;
+@media (min-width: 576px) {
+  .contact-inner {
+    flex-direction: row;
+  }
 }
 
 .contact-form-contain {
@@ -596,6 +899,82 @@ select:-webkit-autofill:focus {
 .contact-form-contain .contact-button .btn-contact {
   width: 100%;
   padding: 15px;
+}
+
+@media (min-width: 576px) {
+  .contact-form-contain .contact-button .btn-contact {
+    width: 35%;
+  }
+}
+
+@media (min-width: 576px) {
+  .contact-form-contain {
+    width: 50%;
+  }
+}
+
+.contact-form {
+  margin-top: 10px;
+}
+
+.contact-form:not(:first-child) {
+  margin-top: 15px;
+}
+
+.contact-text-contain a > h2 {
+  margin: 5px auto;
+  font-size: 1.15rem;
+}
+
+.contact-text-contain a > h2:hover {
+  color: #ef7b1b;
+}
+
+.contact-text-contain p {
+  margin-top: 10px;
+}
+
+.contact-text-contain h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+  .contact-text-contain {
+    max-width: 50%;
+    padding-right: 10px;
+  }
+  .contact-text-contain a > h2 {
+    font-size: 3.3vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-text-contain {
+    max-width: 50%;
+  }
+  .contact-text-contain a > h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-text-contain a > h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.formgroup {
+  position: relative;
+}
+
+.formgroup label {
+  position: absolute;
+  top: -6px;
+  left: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #fff;
 }
 
 .back-to-top {
@@ -620,25 +999,25 @@ select:-webkit-autofill:focus {
 }
 
 .back-to-top:hover i {
-  animation: animationFrames ease 1s;
+  animation: UpanimationFrames ease 1s;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
   animation-fill-mode: forwards;
   /*when the spec is finished*/
-  -webkit-animation: animationFrames ease 1s;
+  -webkit-animation: UpanimationFrames ease 1s;
   -webkit-animation-iteration-count: 1;
   -webkit-transform-origin: 50% 50%;
   -webkit-animation-fill-mode: forwards;
   /*Chrome 16+, Safari 4+*/
-  -moz-animation: animationFrames ease 1s;
+  -moz-animation: UpanimationFrames ease 1s;
   -moz-animation-iteration-count: 1;
   -moz-transform-origin: 50% 50%;
   -moz-animation-fill-mode: forwards;
   /*FF 5+*/
-  -o-animation: animationFrames ease 1s;
+  -o-animation: UpanimationFrames ease 1s;
   -o-animation-iteration-count: 1;
   -o-transform-origin: 50% 50%;
-  -ms-animation: animationFrames ease 1s;
+  -ms-animation: UpanimationFrames ease 1s;
   -ms-animation-iteration-count: 1;
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode: forwards;

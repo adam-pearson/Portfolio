@@ -7,18 +7,161 @@
     left: 0;
     background-color: $white;
     border-right: 1px solid $primary-colour;
+    box-shadow: 3px 0 3px rgba(239,123,27,.1);
     overflow-x: hidden;
-    padding-top: 20px;
     display: none;
     @include media-md {
         display: block;
     }
   }
 
-  .sidebar a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
+  .sidebar {
+      .nav-link, .contact-link {
+        padding: 12px 16px 12px 16px;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: .9rem;
+        display: block;
+        text-align: center;
+        position: relative;
+    }
+    .nav-link {
+        color: $dark-grey-2;
+        &:hover {
+            color: $primary-colour;
+        }
+    }
+    .contact-link {
+        transition: 0.3s ease all;
+        &:hover {
+            color: $white;
+        }
+    }
   }
+
+  .sidebar-logo {
+    margin-bottom: 15px;
+    svg {
+        width: 100%;
+        padding: 16px;
+        height: 159px;
+        * {
+            transition: 0.3s ease all;
+            transform-origin: center center;
+        }
+    }
+    &:hover {
+        #Crossbar {
+            animation: crossbar-anim .3s;
+        }
+        #P_Bowl {
+            animation: p-bowl-anim .3s;
+        }
+        #A_Foot {
+            animation: a-foot-anim .3s;
+        }
+        #Stem {
+            animation: stem-anim .3s;
+        }
+        .st1 {
+            animation: scale-logo .3s;
+            animation-delay: .35s;
+        }
+        .st0 {
+            fill: $secondary-colour;
+        }
+        
+    }
+}
+
+.link-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+}
+
+/* sizes and styles the underline */
+
+.link-container .underline::after {
+    top: 100%;
+    height: 2px;
+    width: 0%;
+    left: 5%;
+    background-color: $primary-colour;
+      transition: .3s ease all;
+  }
+  
+  .link-container:hover .underline::after {
+    width: 90%;
+    transition: 0.3s ease all;
+  }
+
+/* container for the contact nav button */
+
+.contact-container {
+padding: 12px 16px 12px 16px;
+text-decoration: none;
+font-family: 'Roboto', sans-serif;
+font-weight: 300;
+font-size: .9rem;
+color: $dark-grey-2;
+display: block;
+text-align: center;
+position: relative;
+&:hover {
+    color: $white;
+}
+}
+
+.contact-container  {
+padding: 0;
+position: relative;
+display: block;
+width: 100%;
+text-align: center;
+cursor: pointer;
+color: $white;
+border-top: 2px solid $primary-colour;
+border-bottom: 2px solid $primary-colour;
+margin: 20px 0;
+.underline::after {
+    top: 0;
+    height: 100%;
+    width: 0%;
+    left: 0%;
+    background-color: $primary-colour;
+        transition: .3s ease all;
+}
+&:hover .underline::after {
+    color: $white;
+    width: 100%;
+    transition: 0.3s ease all;
+    z-index: -1;
+    }
+}
+
+.social-links {
+    display: flex;
+    color: $primary-colour;
+    padding: 0 15px;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    a {
+        color: $primary-colour;
+        &:hover {
+            color: $secondary-colour;
+        }
+    }
+}

@@ -1,6 +1,10 @@
+
+
 .projects-section.container {
     display: flex;
     justify-content: center;
+    padding-bottom: 40px;
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,.05);
 }
 
 .projects-inner {
@@ -9,26 +13,46 @@
     padding-left: 15px;
     padding-right: 15px;
     justify-content: center;
-    @include media-md {
-        flex: 1 45%;
-    }
+    justify-content: space-between;
 }
 
 .project {
     position: relative;
     padding-top: 40px;
+    overflow: hidden;
     h2 {
         margin-top: 5px;
         margin-bottom: 5px;
-        font-size: 1.6rem;
         transition: 250ms;
         color: $primary-colour;
+        position: absolute;
+        bottom: 25px;
+        @include media-sm {
+            font-size: 2.25rem;
+            bottom: 5px;
+        }
+        @include media-md {
+            font-size: 1.6rem;
+            bottom: 10px;
+            left: 15px;
+        }
     }
     h3 {
         margin: 0;
-        font-size: 1.2rem;
         transition: 250ms;
         color: $primary-colour;
+        font-size: 1rem;
+        position: absolute;
+        bottom: 5px;
+        @include media-sm {
+            font-size: 1.6rem;
+            opacity: 0;
+            bottom: 15px;
+        }
+        @include media-md {
+            font-size: 1.2rem;
+            left: 15px;
+        }
     }
     i {
         opacity: 0;
@@ -36,12 +60,28 @@
     &:hover {
         h2, h3 {
             color: $primary-colour;
-            text-shadow: 0 0 3px $primary-colour;
+            text-shadow: 0 0 3px rgba(239,123,27,.5);
         }
         i {
                 -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                         animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                         
+        }
+        @include media-sm {
+            h2 {
+                bottom: 35px;
+            }
+            h3 {
+                opacity: 1;
+            }
+        }
+        @include media-md {
+            h2 {
+                bottom: 35px;
+            }
+            h3 {
+                opacity: 1;
+            }
         }
     }
     .project-image-contain {
@@ -55,5 +95,16 @@
         bottom: 5px;
         left: 0px;
         padding: 10px 20px;
+        width: 100%;
+        @include media-md {
+            position: initial;
+            padding: 0;
+        }
+    }
+    @include media-md {
+        width: 49%
+    }
+    @include media-lg {
+        width: 32%;
     }
 }
