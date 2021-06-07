@@ -241,7 +241,7 @@ select:-webkit-autofill:focus {
 
 @keyframes slide-in-left {
   0% {
-    transform: translateX(0px);
+    transform: translateX(-10px);
   }
   100% {
     transform: translateX(5px);
@@ -249,7 +249,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-/* logo animation */
+/* logo svg animation */
 @keyframes scale-logo {
   0% {
     transform: scale(1);
@@ -805,7 +805,6 @@ select:-webkit-autofill:focus {
 }
 
 .project:hover h2, .project:hover h3 {
-  color: #ef7b1b;
   text-shadow: 0 0 3px rgba(239, 123, 27, 0.5);
 }
 
