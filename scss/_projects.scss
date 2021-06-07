@@ -15,18 +15,20 @@
 }
 
 .project {
+    position: relative;
     padding-top: 40px;
-    color: $dark-grey-2;
     h2 {
         margin-top: 5px;
         margin-bottom: 5px;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         transition: 250ms;
+        color: $primary-colour;
     }
     h3 {
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
         transition: 250ms;
+        color: $primary-colour;
     }
     i {
         opacity: 0;
@@ -34,6 +36,7 @@
     &:hover {
         h2, h3 {
             color: $primary-colour;
+            text-shadow: 0 0 3px $primary-colour;
         }
         i {
                 -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -47,5 +50,10 @@
             width: 100%;
         }
     }
+    .project-links {
+        position: absolute;
+        bottom: 5px;
+        left: 0px;
+        padding: 10px 20px;
+    }
 }
-

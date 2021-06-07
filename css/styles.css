@@ -74,13 +74,13 @@ h3.strapline {
   font-size: 1rem;
 }
 
-p {
+p, input, textarea {
   font-family: roboto, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-p strong {
+p strong, input strong, textarea strong {
   font-weight: 500;
   font-style: normal;
 }
@@ -110,6 +110,43 @@ p strong {
 .container {
   width: 100%;
   margin: 0 auto;
+}
+
+.contact-field {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 5px 15px;
+  color: #505050;
+}
+
+.contact-field:not(.message) {
+  height: 50px;
+}
+
+.contact-field:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(33, 36, 74, 0.2);
+}
+
+.contact-field.message {
+  padding-top: 10px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #505050;
+  box-shadow: 0 0 0px 1000px #eee inset;
+  -webkit-box-shadow: 0 0 0px 1000px #eee inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /* Scroll down hero button */
@@ -396,21 +433,23 @@ p strong {
 }
 
 .project {
+  position: relative;
   padding-top: 40px;
-  color: #3e3e3e;
 }
 
 .project h2 {
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   transition: 250ms;
+  color: #ef7b1b;
 }
 
 .project h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: 250ms;
+  color: #ef7b1b;
 }
 
 .project i {
@@ -419,6 +458,7 @@ p strong {
 
 .project:hover h2, .project:hover h3 {
   color: #ef7b1b;
+  text-shadow: 0 0 3px #ef7b1b;
 }
 
 .project:hover i {
@@ -433,7 +473,18 @@ p strong {
   width: 100%;
 }
 
+.project .project-links {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  padding: 10px 20px;
+}
+
 .contact-inner {
   padding: 40px 15px;
+}
+
+.contact-field {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
