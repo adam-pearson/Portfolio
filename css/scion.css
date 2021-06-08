@@ -383,7 +383,15 @@ select:-webkit-autofill:focus {
   color: #ef7b1b;
 }
 
-.social-links a:hover {
+.social-links .social {
+  transition: 0.3s ease all;
+}
+
+.social-links .social:hover {
+  transform: scale(1.4);
+}
+
+.social-links .social:hover a {
   color: #21244a;
 }
 

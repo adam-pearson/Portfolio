@@ -160,8 +160,14 @@ margin: 20px 0;
     justify-content: space-between;
     a {
         color: $primary-colour;
+    }
+    .social {
+        transition: 0.3s ease all;
         &:hover {
+            transform: scale(1.4);
+            a {
             color: $secondary-colour;
+            }
         }
     }
 }
