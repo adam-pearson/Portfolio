@@ -44,6 +44,7 @@
     color: $primary-colour;
     z-index: 3;
     h1, h2 {
+        color: $primary-colour;
         text-shadow: 1px 1px 3px rgba(0,0,0,1);
     }
     h1 {

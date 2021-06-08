@@ -589,7 +589,6 @@ select:-webkit-autofill:focus {
 
 .header-buttons {
   display: flex;
-  align-items: center;
   margin-left: 10px;
 }
 
@@ -719,6 +718,7 @@ select:-webkit-autofill:focus {
 }
 
 .hero-content h1, .hero-content h2 {
+  color: #ef7b1b;
   text-shadow: 1px 1px 3px black;
 }
 
@@ -934,6 +934,12 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media screen and (min-width: 768px) and (-ms-high-contrast: none) {
+  .project {
+    width: 45%;
+  }
+}
+
 @media (min-width: 992px) {
   .project {
     width: 32%;
@@ -942,7 +948,8 @@ select:-webkit-autofill:focus {
 
 @media screen and (-ms-high-contrast: none) {
   .project {
-    padding: 5px;
+    margin: 5px;
+    padding: 0;
   }
 }
 

@@ -115,12 +115,16 @@
         }
     }
     @include media-md {
-        width: 49%
+        width: 49%;
+        @include media-ie {
+            width: 45%;
+        }
     }
     @include media-lg {
         width: 32%;
     }
     @include media-ie {
-        padding: 5px;
+        margin: 5px;
+        padding: 0;
     }
 }
