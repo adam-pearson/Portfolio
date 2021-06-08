@@ -104,11 +104,10 @@ p strong, span strong, li strong, input strong, textarea strong, label strong {
 }
 
 .whole-page {
-  display: flex;
-  flex-direction: column;
   min-height: 100%;
   position: absolute;
   top: 0;
+  align-content: stretch;
 }
 
 .container {

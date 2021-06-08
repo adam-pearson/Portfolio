@@ -89,11 +89,12 @@ p, span, li, input, textarea, label {
 }
 
 .whole-page {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     min-height: 100%;
     position:absolute;
     top: 0;
+    align-content: stretch;
 }
 
 .container {
