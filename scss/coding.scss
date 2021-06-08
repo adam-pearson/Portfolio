@@ -23,9 +23,9 @@
 
 .inner {
     text-align: center;
-    color: $white;
     @include centred;
     h1 {
+        color: $white;
         -webkit-animation: coming-soon 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
         animation: coming-soon 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
     }

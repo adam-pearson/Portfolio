@@ -15,17 +15,14 @@
   scroll-behavior: smooth;
 }
 
-html {
-  min-height: 100%;
-}
-
-body {
+html, body {
+  height: 100%;
   min-height: 100%;
 }
 
 a {
   text-decoration: none;
-  color: initial;
+  color: #3e3e3e;
 }
 
 h1 {
@@ -33,6 +30,7 @@ h1 {
   font-weight: 600;
   font-style: normal;
   font-size: 3rem;
+  color: #3e3e3e;
 }
 
 h2 {
@@ -40,6 +38,7 @@ h2 {
   font-weight: 600;
   font-style: normal;
   font-size: 1.5rem;
+  color: #3e3e3e;
 }
 
 h2.strapline {
@@ -47,6 +46,7 @@ h2.strapline {
   font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
+  color: #3e3e3e;
 }
 
 h3 {
@@ -111,7 +111,6 @@ p strong, span strong, li strong, input strong, textarea strong, label strong {
 }
 
 .container {
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -726,12 +725,14 @@ select:-webkit-autofill:focus {
 @media (min-width: 992px) {
   .hero-content h1 {
     font-size: 4rem;
+    color: #ef7b1b;
   }
 }
 
 @media (min-width: 992px) {
   .hero-content h2 {
     font-size: 2.5rem;
+    color: #ef7b1b;
   }
 }
 
@@ -784,9 +785,8 @@ select:-webkit-autofill:focus {
 }
 
 .projects-section.container {
-  display: flex;
-  justify-content: center;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.05);
+  height: 100%;
 }
 
 .projects-inner {
@@ -803,6 +803,13 @@ select:-webkit-autofill:focus {
 @media (min-width: 768px) {
   .projects-inner {
     gap: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-inner {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -916,7 +923,7 @@ select:-webkit-autofill:focus {
 
 @media (min-width: 768px) {
   .project .project-links {
-    position: initial;
+    position: static;
     padding: 0;
   }
 }
@@ -930,6 +937,12 @@ select:-webkit-autofill:focus {
 @media (min-width: 992px) {
   .project {
     width: 32%;
+  }
+}
+
+@media screen and (-ms-high-contrast: none) {
+  .project {
+    padding: 5px;
   }
 }
 
