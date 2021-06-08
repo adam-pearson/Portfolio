@@ -70,7 +70,7 @@ h3.strapline {
   font-size: 1rem;
 }
 
-p, input, textarea, label {
+p, span, li, input, textarea, label {
   font-family: roboto, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -78,7 +78,7 @@ p, input, textarea, label {
   line-height: 1.4rem;
 }
 
-p strong, input strong, textarea strong, label strong {
+p strong, span strong, li strong, input strong, textarea strong, label strong {
   font-weight: 500;
   font-style: normal;
 }
@@ -121,6 +121,11 @@ p strong, input strong, textarea strong, label strong {
     margin-left: 80px;
     margin-right: auto;
   }
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {

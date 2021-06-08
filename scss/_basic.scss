@@ -58,7 +58,7 @@ h3 {
     font-size: 1rem;
 }
 
-p, input, textarea, label {
+p, span, li, input, textarea, label {
     font-family: roboto, sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -108,6 +108,7 @@ p, input, textarea, label {
 }
 
 .inner {
+    @include push--auto;
     @include media-md {
         min-width: 590px;
         max-width: 800px;

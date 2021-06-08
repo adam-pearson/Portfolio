@@ -29,3 +29,50 @@
         padding-right: 15px;
     }
 }
+
+.scion-text {
+    padding-top: 25px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    h1, h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .inner {
+        &:not(.scion-heading) {
+            @include media-xl {
+            column-count: 2;
+            column-gap: 35px;
+        }
+    }
+    }
+    h1 {
+        font-size: 3rem;
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    h2 {
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+    a {
+        color: $primary-colour;
+        text-decoration: underline;
+        &:hover, &:visited, &:focus {
+            color: $secondary-colour;
+        }
+    }
+    ul {
+        list-style: none;
+        li::before {
+            @include generate-fontawesome-icon("\f105")
+            color: $primary-colour;
+            display: inline-block;
+            width: 1rem;
+            margin-left: -2.5rem;
+        }
+    }
+}

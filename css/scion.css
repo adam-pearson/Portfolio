@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* used by the font awesome mixin */
 /* IE-only media query */
 /* perfectly centres an element relative to its parent (parent needs position: relative) */
@@ -70,7 +71,7 @@ h3.strapline {
   font-size: 1rem;
 }
 
-p, input, textarea, label {
+p, span, li, input, textarea, label {
   font-family: roboto, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -78,7 +79,7 @@ p, input, textarea, label {
   line-height: 1.4rem;
 }
 
-p strong, input strong, textarea strong, label strong {
+p strong, span strong, li strong, input strong, textarea strong, label strong {
   font-weight: 500;
   font-style: normal;
 }
@@ -121,6 +122,11 @@ p strong, input strong, textarea strong, label strong {
     margin-left: 80px;
     margin-right: auto;
   }
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -661,5 +667,58 @@ select:-webkit-autofill:focus {
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.scion-text {
+  padding-top: 25px;
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.scion-text h1, .scion-text h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .scion-text .inner:not(.scion-heading) {
+    column-count: 2;
+    column-gap: 35px;
+  }
+}
+
+.scion-text h1 {
+  font-size: 3rem;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.scion-text h2:first-of-type {
+  margin: 0;
+}
+
+.scion-text a {
+  color: #ef7b1b;
+  text-decoration: underline;
+}
+
+.scion-text a:hover, .scion-text a:visited, .scion-text a:focus {
+  color: #21244a;
+}
+
+.scion-text ul {
+  list-style: none;
+}
+
+.scion-text ul li::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ef7b1b;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -2.5rem;
 }
 /*# sourceMappingURL=scion.css.map */
