@@ -97,7 +97,7 @@ p, span, li, input, textarea, label {
 }
 
 .container {
-    // width: 100%;
+    width: 100%;
     margin: 0 auto;
     @include media-md {
         width: calc(100% - 80px);

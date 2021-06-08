@@ -112,6 +112,7 @@ p strong, span strong, li strong, input strong, textarea strong, label strong {
 }
 
 .container {
+  width: 100%;
   margin: 0 auto;
 }
 
