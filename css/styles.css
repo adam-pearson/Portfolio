@@ -856,8 +856,10 @@ select:-webkit-autofill:focus {
   opacity: 0;
 }
 
-.project:hover img {
-  transform: scale(1.2);
+@media (min-width: 768px) {
+  .project:hover img {
+    transform: scale(1.2);
+  }
 }
 
 .project:hover h2, .project:hover h3 {

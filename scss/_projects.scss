@@ -64,7 +64,9 @@
     /* Text slide in animation */
     &:hover {
         img {
-            transform: scale(1.2);
+            @include media-md {
+                transform: scale(1.2);
+            }
         }
         h2, h3 {
             text-shadow: 0 0 3px rgba(239,123,27,.5);
