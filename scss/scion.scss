@@ -14,7 +14,6 @@
 
 .scion-hero.inner {
     @include push--auto;
-    width: 100%;
     position: relative;
 
 }
@@ -38,6 +37,9 @@
     h1, h2 {
         margin-top: 20px;
         margin-bottom: 10px;
+    }
+    .container {
+        width: 50%;
     }
     .inner {
         &:not(.scion-heading) {
