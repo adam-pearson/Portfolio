@@ -16,11 +16,17 @@
     gap: 15px;
     @include media-md {
         gap: 10px;
+        @include media-ie {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
     }
     @include media-lg {
         padding-left: 0;
         padding-right: 0;
     }
+
 }
 
 .project {
@@ -117,7 +123,7 @@
     @include media-md {
         width: 49%;
         @include media-ie {
-            width: 45%;
+            width: 48%;
         }
     }
     @include media-lg {
