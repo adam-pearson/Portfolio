@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+@import "basic";
+@import "sidebar";
+@import "header";
+@import "keyframes";
+
+
+
+.scion-hero.container {
+    background-color: #DFDBE5;
+    background-image: linear-gradient(149deg, rgba(2,0,36,1) 0%, rgba(33,36,74,1) 40%, rgba(16,18,38,1) 100%);
+}
+
+.scion-hero.inner {
+    @include push--auto;
+    width: 100%;
+    position: relative;
+
+}
+
+.scion-hero-image {
+    text-align: center;
+    height: 200px;
+    img {
+        @include centred;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

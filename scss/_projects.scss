@@ -3,22 +3,26 @@
 .projects-section.container {
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
+    
     box-shadow: 0px 5px 15px 5px rgba(0,0,0,.05);
 }
 
 .projects-inner {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 40px;
     padding-left: 15px;
     padding-right: 15px;
     justify-content: center;
-    justify-content: space-between;
+    gap: 15px;
+    @include media-md {
+        gap: 10px;
+    }
 }
 
 .project {
     position: relative;
-    padding-top: 40px;
     overflow: hidden;
     h2 {
         margin-top: 5px;
@@ -57,7 +61,11 @@
     i {
         opacity: 0;
     }
+    /* Text slide in animation */
     &:hover {
+        img {
+            transform: scale(1.2);
+        }
         h2, h3 {
             text-shadow: 0 0 3px rgba(239,123,27,.5);
         }
@@ -86,7 +94,9 @@
     .project-image-contain {
         width: 100%;
         img {
+            display: block;
             width: 100%;
+            transition: .3s ease transform;
         }
     }
     .project-links {

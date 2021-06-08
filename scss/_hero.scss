@@ -9,7 +9,6 @@
 /* Animated gradient background, positioned with z-index */
 
 .grad-background {
-    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -30,7 +29,6 @@
 
 .hero-inner {
     height: calc(100vh - 90px);
-    position: relative;
     text-align: center;
     display: block;
     background: url(../resources/img/IMG_1940-min.jpg);
