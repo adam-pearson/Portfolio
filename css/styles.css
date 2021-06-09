@@ -600,6 +600,7 @@ select:-webkit-autofill:focus {
 
 /* --------------- Burger Menu --------------- */
 .btn.contact {
+  line-height: 40px;
   height: 56px;
   margin-right: 20px;
   padding-left: 25px;
