@@ -697,7 +697,7 @@ select:-webkit-autofill:focus {
   height: calc(100vh - 90px);
   text-align: center;
   display: block;
-  background: url(../resources/img/IMG_1940-min.jpg);
+  background: url(../resources/img/hero-image.jpg);
   background-size: cover;
 }
 
