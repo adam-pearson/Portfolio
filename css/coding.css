@@ -20,6 +20,12 @@ html, body {
   min-height: 100%;
 }
 
+@media screen and (-ms-high-contrast: none) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
 a {
   text-decoration: none;
   color: #3e3e3e;
@@ -129,26 +135,26 @@ p strong, span strong, li strong, input strong, textarea strong, label strong {
 
 @media (min-width: 768px) {
   .inner {
-    min-width: 590px;
+    min-width: 570px;
     max-width: 800px;
   }
 }
 
 @media (min-width: 992px) {
   .inner {
-    min-width: 800px;
+    min-width: 780px;
   }
 }
 
 @media (min-width: 1200px) {
   .inner {
-    min-width: 1020px;
+    min-width: 1000px;
   }
 }
 
 @media (min-width: 1400px) {
   .inner {
-    max-width: 1200px;
+    max-width: 1180px;
   }
 }
 
