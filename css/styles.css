@@ -99,6 +99,12 @@ p strong, span strong, li strong, input strong, textarea strong, label strong {
 }
 
 .btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn span {
   color: #fff;
   font-family: paralucent, sans-serif;
   font-weight: 600;
@@ -601,9 +607,8 @@ select:-webkit-autofill:focus {
   margin-left: 10px;
 }
 
-/* --------------- Burger Menu --------------- */
 .btn.contact {
-  line-height: 40px;
+  line-height: 37px;
   height: 56px;
   margin-right: 20px;
   padding-left: 25px;
@@ -614,16 +619,7 @@ select:-webkit-autofill:focus {
   background-color: #21244a;
 }
 
-.btn.contact a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-.btn.contact span {
-  display: inline;
-}
-
+/* --------------- Burger Menu --------------- */
 .btn.burger {
   color: #fff;
   height: 56px;
@@ -1093,12 +1089,15 @@ select:-webkit-autofill:focus {
   background-color: #fff;
 }
 
-.back-to-top {
-  text-align: center;
-  padding-bottom: 25px;
+.btt {
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+}
+
+.back-to-top {
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 35px;
 }
 
 .back-to-top i {

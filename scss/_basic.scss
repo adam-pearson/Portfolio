@@ -81,13 +81,17 @@ p, span, li, input, textarea, label {
     cursor: pointer;
     transition: .25s ease all;
     a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    span {
         color: $white;
         font-family: paralucent, sans-serif;
         font-weight: 600;
         font-style: normal;
         font-size: 1rem;
         text-transform: uppercase;
-
     }
     &:hover {
         background-color: $secondary-colour;
