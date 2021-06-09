@@ -75,19 +75,23 @@ p, span, li, input, textarea, label {
 
 .btn {
     background-color: $primary-colour;
-    color: $white;
-    font-family: paralucent, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1rem;
-    text-transform: uppercase;
     border: none;
     border-radius: 4px;
     padding: 10px 15px;
     cursor: pointer;
     transition: .25s ease all;
+    a {
+        color: $white;
+        font-family: paralucent, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1rem;
+        text-transform: uppercase;
+
+    }
     &:hover {
         background-color: $secondary-colour;
+        
     }
 }
 
