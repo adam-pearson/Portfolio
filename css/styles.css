@@ -841,7 +841,7 @@ select:-webkit-autofill:focus {
   position: relative;
   overflow: hidden;
   width: 100%;
-  /* Text slide in animation */
+  /* Text slide in animation, project card scale animation, video show */
 }
 
 .project h2 {
@@ -926,6 +926,15 @@ select:-webkit-autofill:focus {
   .project:hover h3 {
     opacity: 1;
   }
+  .project:hover a .project-image-contain .video-container,
+  .project:hover .project-links .video-grad {
+    display: block;
+  }
+}
+
+.project:hover .container {
+  display: block;
+  opacity: 1;
 }
 
 .project .project-image-contain {
@@ -947,32 +956,32 @@ select:-webkit-autofill:focus {
 }
 
 .project .project-image-contain .project-image.background-1 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/netmatters_page.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/netmatters_page.jpg");
   background-size: cover;
 }
 
 .project .project-image-contain .project-image.background-2 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/LCUBcJ0.png");
   background-size: cover;
 }
 
 .project .project-image-contain .project-image.background-3 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/LCUBcJ0.png");
   background-size: cover;
 }
 
 .project .project-image-contain .project-image.background-4 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/LCUBcJ0.png");
   background-size: cover;
 }
 
 .project .project-image-contain .project-image.background-5 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/LCUBcJ0.png");
   background-size: cover;
 }
 
 .project .project-image-contain .project-image.background-6 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/LCUBcJ0.png");
   background-size: cover;
 }
 
@@ -1014,6 +1023,37 @@ select:-webkit-autofill:focus {
     margin: 5px;
     padding: 0;
   }
+}
+
+/* video to display when hovering over project */
+.video-container,
+.video-grad {
+  display: none;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.video-container video {
+  height: 100%;
+  width: 100%;
+}
+
+.video-grad {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.58) 70%);
+  transition: .3s ease all;
 }
 
 .contact-section {

@@ -70,7 +70,7 @@
     i {
         opacity: 0;
     }
-    /* Text slide in animation */
+    /* Text slide in animation, project card scale animation, video show */
     &:hover {
         a div {
             @include media-md {
@@ -100,12 +100,20 @@
             h3 {
                 opacity: 1;
             }
+            a .project-image-contain .video-container,
+            .project-links .video-grad {
+                display: block;
+            }
         }
+        .container {
+            display: block;
+            opacity: 1;
+        }
+
     }
     .project-image-contain {
         width: 100%;
         transition: .3s ease transform;
-
         img {
             display: block;
             width: 100%;
@@ -136,7 +144,6 @@
                 @include project-image($url:'/resources/img/LCUBcJ0.png');
             }
         }
-
     }
     .project-links {
         position: absolute;
@@ -163,3 +170,37 @@
         padding: 0;
     }
 }
+
+/* video to display when hovering over project */
+
+
+.video-container,
+.video-grad {
+    display: none;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    video {
+        height: 100%;
+        width: 100%;
+    }
+}
+.video-grad {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-image: $video-grad;
+    transition: .3s ease all;
+}
+
+
+

@@ -151,12 +151,18 @@
         <div id="projects" class="projects-section container">
             <div class="projects-inner inner">
                 <div class="project card-1">
-                    <a href="https://netmatters.adam-pearson.netmatters-scs.co.uk/">
+                    <a class="project-link" href="https://netmatters.adam-pearson.netmatters-scs.co.uk/">
                         <div class="project-image-contain">
                             <div class="project-image background-1"></div>
+                            <div class="video-container video-1">
+                                <video loop preload="auto" muted>
+                                    <source src="resources/vid/Netmatters_Project.mp4" type="video/mp4">
+                                </video>                                    
+                            </div>  
                         </div>
                     </a>
                     <a href="#" class="project-links">
+                        <div class="video-grad"></div>
                         <h2>Netmatters Reflection</h2>
                         <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
                         <div class="text-background"></div>
@@ -166,6 +172,8 @@
                     <a href="https://netmatters.adam-pearson.netmatters-scs.co.uk/">
                         <div class="project-image-contain">
                             <div class="project-image background-2"></div>
+                            <div class="video-container video-2">                                
+                            </div>  
                         </div>
                     </a>
                     <a href="#" class="project-links">
@@ -178,7 +186,8 @@
                     <a href="https://netmatters.adam-pearson.netmatters-scs.co.uk/">
                         <div class="project-image-contain">
                             <div class="project-image background-3"></div>
-                            <!-- <img src="resources/img/netmatters_page.jpg" alt="Netmatters Homepage"> -->
+                            <div class="video-container video-2">                                 
+                            </div>  
                         </div>
                     </a>
                     <a href="#" class="project-links">
@@ -216,7 +225,6 @@
                     <a href="https://netmatters.adam-pearson.netmatters-scs.co.uk/">
                         <div class="project-image-contain">
                             <div class="project-image background-6"></div>
-                            <!-- <img src="resources/img/netmatters_page.jpg" alt="Netmatters Homepage"> -->
                         </div>
                     </a>
                     <a href="#" class="project-links">
@@ -284,5 +292,43 @@
         </div>
     </div>
     </div>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+    <!-- Video play on hover -->
+    <script > 
+        $(document).ready(function(){
+            $(".project").hover(
+                function() {
+                    $(".project")
+                    .children(".project-link")
+                    .children(".project-image-contain")
+                    .children(".video-container")
+                    .children("video")
+                    .get(0)
+                    .play();
+                }, function() {
+                    $(".project")
+                    .children(".project-link")
+                    .children(".project-image-contain")
+                    .children(".video-container")
+                    .children("video")
+                    .get(0)
+                    .pause();
+                    $(".project")
+                    .children(".project-link")
+                    .children(".project-image-contain")
+                    .children(".video-container")
+                    .children("video")
+                    .get(0)
+                    .currentTime = 0;
+            });
+        });
+
+
+
+    </script> 
 </body>
 </html>
