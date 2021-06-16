@@ -170,3 +170,8 @@ box-shadow: $val;
         100%{background-position:0% 17%}
     }
 }
+
+@mixin project-image($url) {
+    background-image: $project-grad, url($url);
+    background-size: cover;
+}

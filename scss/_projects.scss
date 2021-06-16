@@ -32,6 +32,7 @@
 .project {
     position: relative;
     overflow: hidden;
+    width: 100%;
     h2 {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -71,9 +72,9 @@
     }
     /* Text slide in animation */
     &:hover {
-        img {
+        a div {
             @include media-md {
-                transform: scale(1.2);
+                transform: scale(1.15);
             }
         }
         h2, h3 {
@@ -103,11 +104,39 @@
     }
     .project-image-contain {
         width: 100%;
+        transition: .3s ease transform;
+
         img {
             display: block;
             width: 100%;
             transition: .3s ease transform;
         }
+        //Project card images
+        .project-image {
+            width: 100%;
+            padding-top: 56.25%;
+            transition: .3s ease transform;
+            position: relative;
+            &.background-1 {
+                @include project-image($url:'/resources/img/netmatters_page.jpg');
+            }
+            &.background-2 {
+                @include project-image($url:'/resources/img/LCUBcJ0.png');
+            }
+            &.background-3 {
+                @include project-image($url:'/resources/img/LCUBcJ0.png');
+            }
+            &.background-4 {
+                @include project-image($url:'/resources/img/LCUBcJ0.png');
+            }
+            &.background-5 {
+                @include project-image($url:'/resources/img/LCUBcJ0.png');
+            }
+            &.background-6 {
+                @include project-image($url:'/resources/img/LCUBcJ0.png');
+            }
+        }
+
     }
     .project-links {
         position: absolute;

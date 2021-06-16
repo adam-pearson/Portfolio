@@ -1,4 +1,5 @@
 /* used by the font awesome mixin */
+/* gradient for project cards */
 /* IE-only media query */
 /* perfectly centres an element relative to its parent (parent needs position: relative) */
 /* generates a font awesome icon - put icon code in first argument, colour in second */
@@ -839,6 +840,7 @@ select:-webkit-autofill:focus {
 .project {
   position: relative;
   overflow: hidden;
+  width: 100%;
   /* Text slide in animation */
 }
 
@@ -895,8 +897,8 @@ select:-webkit-autofill:focus {
 }
 
 @media (min-width: 768px) {
-  .project:hover img {
-    transform: scale(1.2);
+  .project:hover a div {
+    transform: scale(1.15);
   }
 }
 
@@ -928,12 +930,50 @@ select:-webkit-autofill:focus {
 
 .project .project-image-contain {
   width: 100%;
+  transition: .3s ease transform;
 }
 
 .project .project-image-contain img {
   display: block;
   width: 100%;
   transition: .3s ease transform;
+}
+
+.project .project-image-contain .project-image {
+  width: 100%;
+  padding-top: 56.25%;
+  transition: .3s ease transform;
+  position: relative;
+}
+
+.project .project-image-contain .project-image.background-1 {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/netmatters_page.jpg");
+  background-size: cover;
+}
+
+.project .project-image-contain .project-image.background-2 {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-size: cover;
+}
+
+.project .project-image-contain .project-image.background-3 {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-size: cover;
+}
+
+.project .project-image-contain .project-image.background-4 {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-size: cover;
+}
+
+.project .project-image-contain .project-image.background-5 {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-size: cover;
+}
+
+.project .project-image-contain .project-image.background-6 {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 60%), url("/resources/img/LCUBcJ0.png");
+  background-size: cover;
 }
 
 .project .project-links {
