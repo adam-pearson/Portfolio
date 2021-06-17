@@ -22,32 +22,30 @@ var overlay = $('.overlay');
 
 
 burger.on('click', function() {
-    sidemenu.show();
     sidemenu.animate({'left': 0}, 300);
     sidemenu.addClass('shown');
-    overlay.show();
     overlay.animate({'opacity': 1}, 150);
     overlay.addClass('shown');
+    $('body').addClass('fixed-position');
 });
 
 close.on('click', function() {
-    sidemenu.hide();
     sidemenu.removeClass('shown');
-    overlay.hide();
     overlay.removeClass('shown');
+    $('body').removeClass('fixed-position');
 });
 
 overlay.on('click', function() {
-    sidemenu.hide();
     sidemenu.removeClass('shown');
-    overlay.hide();
     overlay.removeClass('shown');
+    $('body').removeClass('fixed-position');
 });
 
 $(window).resize(function() {
     if ($(window).width() >= 768) {
         sidemenu.removeClass('shown');
-        overlay.hide();
         overlay.removeClass('shown');
+        $('body').removeClass('fixed-position');
+        $('.btn.burger').blur();
     }
 });

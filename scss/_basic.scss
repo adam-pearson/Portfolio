@@ -12,7 +12,8 @@ html, body {
 }
 
 .fixed-position {
-    position: fixed;
+    overflow: hidden;
+    height: 100%;
 }
 
 a {
