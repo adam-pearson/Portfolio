@@ -77,7 +77,7 @@ h3.strapline {
   font-size: 1rem;
 }
 
-p, span, li, input, textarea, label {
+p, span, li:not(.nav), input, textarea, label {
   font-family: roboto, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -85,9 +85,13 @@ p, span, li, input, textarea, label {
   line-height: 1.4rem;
 }
 
-p strong, span strong, li strong, input strong, textarea strong, label strong {
+p strong, span strong, li:not(.nav) strong, input strong, textarea strong, label strong {
   font-weight: 500;
   font-style: normal;
+}
+
+ul {
+  padding-left: 0;
 }
 
 .btn {
@@ -166,42 +170,6 @@ p strong, span strong, li strong, input strong, textarea strong, label strong {
   .inner {
     max-width: 1180px;
   }
-}
-
-.contact-field {
-  background-color: #fff;
-  border: 1px solid #3e3e3e;
-  border-radius: 4px;
-  width: 100%;
-  padding: 5px 12px;
-  color: #505050;
-}
-
-.contact-field:not(.message) {
-  height: 50px;
-}
-
-.contact-field:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px rgba(239, 123, 27, 0.1);
-  border: 1px solid #ef7b1b;
-}
-
-.contact-field:focus ~ label {
-  color: #ef7b1b;
-}
-
-.contact-field.message {
-  padding-top: 10px;
-}
-
-label {
-  font-size: .75rem;
-}
-
-label.required::after {
-  content: "*";
-  color: #ef7b1b;
 }
 
 /* form autofill styles */

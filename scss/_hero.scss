@@ -16,8 +16,8 @@
     bottom: 0;
     left: 0;
     @include gradient-anim;
-    mix-blend-mode: multiply;
-    opacity: .65;
+    mix-blend-mode: color;
+    opacity: .15;
     z-index: 2;
     @include media-ie {
         opacity: .2;
@@ -46,6 +46,15 @@
     h1, h2 {
         color: $primary-colour;
         text-shadow: 1px 1px 3px rgba(0,0,0,1);
+    }
+    .Typewriter__wrapper {
+        h1 {
+            line-height: 4rem;
+        }
+        h2 {
+             line-height: 2.5rem;
+        }
+        
     }
     h1 {
         @include media-lg {

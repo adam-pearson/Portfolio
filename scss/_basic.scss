@@ -61,7 +61,7 @@ h3 {
     font-size: 1rem;
 }
 
-p, span, li, input, textarea, label {
+p, span, li:not(.nav), input, textarea, label {
     font-family: roboto, sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -71,6 +71,10 @@ p, span, li, input, textarea, label {
         font-weight: 500;
         font-style: normal;
     }
+}
+
+ul {
+    padding-left: 0;
 }
 
 .btn {
@@ -132,37 +136,6 @@ p, span, li, input, textarea, label {
     }
     @include media-xxl {
         max-width: 1180px;
-    }
-}
-
-.contact-field {
-    background-color: $white;
-    border: 1px solid $dark-grey-2;
-    border-radius: 4px;
-    width: 100%;
-    padding: 5px 12px;
-    color: $dark-grey;
-    &:not(.message) {
-        height: 50px;
-    }
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 2px 2px rgba(239,123,27,.1);
-        border: 1px solid $primary-colour;
-        ~ label {
-            color: $primary-colour;
-        }
-    }
-    &.message {
-        padding-top: 10px;
-    }
-}
-
-label {
-    font-size: .75rem;
-    &.required::after {
-        content: "*";
-        color: $primary-colour;
     }
 }
 

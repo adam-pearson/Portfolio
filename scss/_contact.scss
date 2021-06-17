@@ -89,6 +89,39 @@
         padding-right: 5px;
         background-color: $white;
     }
+    &.name input:nth-child(n+3) {
+        margin-top: 15px;
+    }
+    &.name .ln-label { 
+        top: 54px;
+    }
+    &.name {
+        @include media-lg {
+            display: flex;
+            margin-top: 0;
+            align-content: center;
+            .ln-label {
+                top: -11px;
+                left: 210px;
+            }
+            #last-name {
+                margin-top: 0;
+                margin-left: 15px;
+            }
+        }
+        @include media-xl {
+            .ln-label {
+                top: -11px;
+                left: 260px;
+            }
+        }
+        @include media-xxl {
+            .ln-label {
+                top: -11px;
+                left: 306px;
+            }
+        }
+    }
 }
 
 
@@ -119,3 +152,33 @@
 }
 
 
+.contact-field {
+    background-color: $white;
+    border: 1px solid $dark-grey-2;
+    border-radius: 4px;
+    width: 100%;
+    padding: 5px 12px;
+    color: $dark-grey;
+    &:not(.message) {
+        height: 50px;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 2px rgba(239,123,27,.1);
+        border: 1px solid $primary-colour;
+        &+label {
+            color: $primary-colour;
+        }
+    }
+    &.message {
+        padding-top: 10px;
+    }
+}
+
+label {
+    font-size: .75rem;
+    &.required::after {
+        content: "*";
+        color: $primary-colour;
+    }
+}
