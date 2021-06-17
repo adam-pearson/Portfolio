@@ -4,7 +4,7 @@
     position: fixed;
     z-index: 4;
     top: 0;
-    left: 0;
+    left: -100%;
     background-color: $white;
     border-right: 1px solid $primary-colour;
     box-shadow: 3px 0 3px rgba(239,123,27,.1);
@@ -12,6 +12,7 @@
     display: none;
     @include media-md {
         display: block;
+        left: 0;
     }
   }
 
@@ -33,7 +34,6 @@
         }
     }
     .contact-link {
-        transition: 0.3s ease all;
         &:hover {
             color: $white;
         }
@@ -41,10 +41,11 @@
   }
 
   .sidebar-logo {
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
+    // margin-top: 0;
     svg {
         width: 100%;
-        padding: 16px;
+        padding: 0 16px 16px 16px;
         height: 159px;
         * {
             transition: 0.3s ease all;
@@ -164,7 +165,8 @@ margin: 20px 0;
         color: $primary-colour;
     }
     .social {
-        transition: 0.3s ease all;
+        padding-top: 15px;
+        padding-bottom: 15px;
         &:hover {
             transform: scale(1.4);
             a {
@@ -172,4 +174,72 @@ margin: 20px 0;
             }
         }
     }
+}
+
+//Mobile sidebar styles
+
+.close button {
+    display: none;
+    i {
+        position: relative;
+    }
+}
+
+#sidebar.shown {
+    display: block;
+    left: 0;
+    width: 60%;
+    z-index: 1000;
+    nav ul li a{
+        font-size: 1.25rem;
+        padding: 16px 20px 16px 20px;
+    }
+    #socials {
+        .social {
+            width: 25%;
+            text-align: center;
+            padding-top: 15px;
+        }
+    }
+    .close button {
+        display: block;
+        margin-left: auto;
+        margin-right: 15px;
+        margin-top: 15px;
+        padding: 15px;
+        font-size: 2rem;
+        color: $secondary-colour;
+        z-index: 1;
+        background-color: $white;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+            color: $primary-colour;
+        }
+    }
+}
+
+#sidebar .sidebar-logo {
+    position: relative;
+    svg {
+        height: 120px;
+    padding-bottom: 0;
+    }
+}
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: none;
+    opacity: 0;
+}
+
+.overlay.shown {
+    display: block;
 }

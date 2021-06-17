@@ -11,6 +11,9 @@ html, body {
     }
 }
 
+.fixed-position {
+    position: fixed;
+}
 
 a {
     text-decoration: none;
@@ -110,6 +113,7 @@ ul {
     position:absolute;
     top: 0;
     align-content: stretch;
+    transition: .3s ease all;
 }
 
 .container {

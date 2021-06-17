@@ -28,6 +28,10 @@ html, body {
   }
 }
 
+.fixed-position {
+  position: fixed;
+}
+
 a {
   text-decoration: none;
   color: #3e3e3e;
@@ -128,6 +132,7 @@ ul {
   position: absolute;
   top: 0;
   align-content: stretch;
+  transition: .3s ease all;
 }
 
 .container {
@@ -195,7 +200,7 @@ select:-webkit-autofill:focus {
   position: fixed;
   z-index: 4;
   top: 0;
-  left: 0;
+  left: -100%;
   background-color: #fff;
   border-right: 1px solid #ef7b1b;
   box-shadow: 3px 0 3px rgba(239, 123, 27, 0.1);
@@ -206,6 +211,7 @@ select:-webkit-autofill:focus {
 @media (min-width: 768px) {
   .sidebar {
     display: block;
+    left: 0;
   }
 }
 
@@ -228,21 +234,13 @@ select:-webkit-autofill:focus {
   color: #ef7b1b;
 }
 
-.sidebar .contact-link {
-  transition: 0.3s ease all;
-}
-
 .sidebar .contact-link:hover {
   color: #fff;
 }
 
-.sidebar-logo {
-  margin-bottom: 15px;
-}
-
 .sidebar-logo svg {
   width: 100%;
-  padding: 16px;
+  padding: 0 16px 16px 16px;
   height: 159px;
 }
 
@@ -367,7 +365,8 @@ select:-webkit-autofill:focus {
 }
 
 .social-links .social {
-  transition: 0.3s ease all;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .social-links .social:hover {
@@ -376,6 +375,75 @@ select:-webkit-autofill:focus {
 
 .social-links .social:hover a {
   color: #21244a;
+}
+
+.close button {
+  display: none;
+}
+
+.close button i {
+  position: relative;
+}
+
+#sidebar.shown {
+  display: block;
+  left: 0;
+  width: 60%;
+  z-index: 1000;
+}
+
+#sidebar.shown nav ul li a {
+  font-size: 1.25rem;
+  padding: 16px 20px 16px 20px;
+}
+
+#sidebar.shown #socials .social {
+  width: 25%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#sidebar.shown .close button {
+  display: block;
+  margin-left: auto;
+  margin-right: 15px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 2rem;
+  color: #21244a;
+  z-index: 1;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#sidebar.shown .close button:hover {
+  transform: scale(1.1);
+  color: #ef7b1b;
+}
+
+#sidebar .sidebar-logo {
+  position: relative;
+}
+
+#sidebar .sidebar-logo svg {
+  height: 120px;
+  padding-bottom: 0;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: none;
+  opacity: 0;
+}
+
+.overlay.shown {
+  display: block;
 }
 
 .header.container {
