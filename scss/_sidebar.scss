@@ -221,10 +221,12 @@ margin: 20px 0;
 }
 
 #sidebar .sidebar-logo {
-    position: relative;
-    svg {
-        height: 120px;
-    padding-bottom: 0;
+    @media screen and (max-width: $md-width) {
+        position: relative;
+        svg {
+            height: 120px;
+        padding-bottom: 0;
+        }
     }
 }
 

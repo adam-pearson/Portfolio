@@ -1,18 +1,3 @@
-// Typewriter effect - https://safi.me.uk/typewriterjs/
-
-var app = document.getElementById('app');
-
-var typewriter = new Typewriter(app, {
-    loop: false,
-    cursor: "",
-    delay: 50
-});
-
-typewriter.typeString('<h1>My Name is Adam Pearson</h1>')
-    .pauseFor(750)
-    .typeString('<h2 class="strapline">I\'m a Web Developer')
-    .start();
-
 // Side bar
 
 var burger = $('#burger');
@@ -48,4 +33,16 @@ $(window).resize(function() {
         $('body').removeClass('fixed-position');
         $('.btn.burger').blur();
     }
+});
+
+$('a[href*="#projects"]').on('click', function() {
+    sidemenu.removeClass('shown');
+    overlay.removeClass('shown');
+    $('body').removeClass('fixed-position');
+});
+
+$('.nav a[href*="#contact"]').on('click', function() {
+    sidemenu.removeClass('shown');
+    overlay.removeClass('shown');
+    $('body').removeClass('fixed-position');
 });

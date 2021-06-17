@@ -35,6 +35,7 @@ html, body {
 a {
   text-decoration: none;
   color: #3e3e3e;
+  cursor: pointer;
 }
 
 h1 {
@@ -588,13 +589,14 @@ select:-webkit-autofill:focus {
   color: #ef7b1b;
 }
 
-#sidebar .sidebar-logo {
-  position: relative;
-}
-
-#sidebar .sidebar-logo svg {
-  height: 120px;
-  padding-bottom: 0;
+@media screen and (max-width: 768px) {
+  #sidebar .sidebar-logo {
+    position: relative;
+  }
+  #sidebar .sidebar-logo svg {
+    height: 120px;
+    padding-bottom: 0;
+  }
 }
 
 .overlay {
@@ -956,13 +958,13 @@ select:-webkit-autofill:focus {
   text-shadow: 0 0 3px rgba(239, 123, 27, 0.5);
 }
 
-.project:hover i {
+.project:hover h3 i {
   animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @media (min-width: 576px) {
   .project:hover h2 {
-    bottom: 35px;
+    bottom: 45px;
   }
   .project:hover h3 {
     opacity: 1;

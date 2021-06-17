@@ -35,6 +35,7 @@ html, body {
 a {
   text-decoration: none;
   color: #3e3e3e;
+  cursor: pointer;
 }
 
 h1 {
@@ -422,13 +423,14 @@ select:-webkit-autofill:focus {
   color: #ef7b1b;
 }
 
-#sidebar .sidebar-logo {
-  position: relative;
-}
-
-#sidebar .sidebar-logo svg {
-  height: 120px;
-  padding-bottom: 0;
+@media screen and (max-width: 768px) {
+  #sidebar .sidebar-logo {
+    position: relative;
+  }
+  #sidebar .sidebar-logo svg {
+    height: 120px;
+    padding-bottom: 0;
+  }
 }
 
 .overlay {

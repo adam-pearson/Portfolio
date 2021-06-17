@@ -83,14 +83,14 @@
         h2, h3 {
             text-shadow: 0 0 3px rgba(239,123,27,.5);
         }
-        i {
+        h3 i {
                 -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                         animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                         
         }
         @include media-sm {
             h2 {
-                bottom: 35px;
+                bottom: 45px;
             }
             h3 {
                 opacity: 1;
