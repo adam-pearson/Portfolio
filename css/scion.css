@@ -860,6 +860,18 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media (min-width: 768px) and (min-width: 992px) {
+  .treehouse.pair .treehouse.text {
+    top: 40px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1200px) {
+  .treehouse.pair .treehouse.text {
+    top: 50px;
+  }
+}
+
 .treehouse.pair a.treehouse {
   color: #ef7b1b;
   text-decoration: underline;
@@ -917,6 +929,18 @@ select:-webkit-autofill:focus {
   }
   .netmatters.pair .netmatters.text ul {
     margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 992px) {
+  .netmatters.pair .netmatters.text {
+    top: 30px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1200px) {
+  .netmatters.pair .netmatters.text {
+    top: 55px;
   }
 }
 

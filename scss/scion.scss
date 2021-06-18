@@ -133,6 +133,12 @@
             position: absolute;
             top: 50px;
             right: 190px;
+            @include media-lg {
+                top: 40px;
+            }
+            @include media-xl {
+                top: 50px;
+            }
         }
     }
     a.treehouse {
@@ -185,6 +191,12 @@
             left: 190px;
             ul {
                 margin-left: 0;
+            }
+            @include media-lg {
+                top: 30px;
+            }
+            @include media-xl {
+                top: 55px;
             }
         }
     }
