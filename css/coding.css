@@ -717,10 +717,6 @@ select:-webkit-autofill:focus {
   background-color: #fff;
 }
 
-body {
-  margin: 0;
-}
-
 .code-block {
   margin-left: auto;
   margin-right: auto;
