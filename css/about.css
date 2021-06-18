@@ -450,6 +450,12 @@ select:-webkit-autofill:focus {
 
 .header.container {
   height: 90px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+  transition: .15s ease all;
   box-shadow: 0 3px 3px rgba(239, 123, 27, 0.1);
 }
 
@@ -457,6 +463,10 @@ select:-webkit-autofill:focus {
   .header.container {
     display: none;
   }
+}
+
+#top.hide {
+  top: -90px;
 }
 
 .header-inner {

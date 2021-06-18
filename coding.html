@@ -7,6 +7,7 @@
     <title>Adam Pearson - Portfolio</title>
     <link rel="shorcut icon" href="resources/img/favicon.ico">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/prism/prism.css">
     <link rel="stylesheet" href="css/coding.css">
     <link rel="stylesheet" href="https://use.typekit.net/idk1wud.css">
     <script src="https://kit.fontawesome.com/9d6ccdf40f.js" crossorigin="anonymous"></script>
@@ -117,47 +118,110 @@
     <div class="overlay"></div>
     <!-- Page Container -->
     <div class="whole-page container">
-        <!-- Header -->
-        <div id="top" class="header container">
-            <div class="header-inner">
-                <div class="logo-container">
-                    <a href="index.html">
-                        <img class="main-logo" src="resources/img/optimised_logo.svg" alt="Adam Pearson monogram logo">
-                    </a>
-                </div>
-                <div class="header-buttons">
-                    <div>
-                        <a href="index.html#contact">
-                            <div class="btn contact">
-                                <span>Contact</span>
-                            </div>
+        <div class="page-background">
+            <!-- Header -->
+            <div id="top" class="header container">
+                <div class="header-inner">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img class="main-logo" src="resources/img/optimised_logo.svg" alt="Adam Pearson monogram logo">
                         </a>
                     </div>
-                    <div>
-                        <button id="burger" type="button" class="btn burger">
-                            <span class="burger-inner">
-                                <span class="burger-lines"></span>
-                            </span>
-                        </button>
+                    <div class="header-buttons">
+                        <div>
+                            <a href="index.html#contact">
+                                <div class="btn contact">
+                                    <span>Contact</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <button id="burger" type="button" class="btn burger">
+                                <span class="burger-inner">
+                                    <span class="burger-lines"></span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- coming soon text -->
-        <div class="container">
-            <div class="inner">
-                <div class="coming-soon">
-                    <h1>Coming Soon</h1>
+            <!-- Netmatters code -->
+            <div class="code container">
+                <div class="code-inner inner">
+                    <div class="code-block">
+                        <h1>Coding Examples</h1>
+                        <h2>Netmatters Reflection</h2>
+                        <p>The following code was my way of getting a navigation navigation navigation submenu
+                            to show up full-width with pure CSS (Sass/scss). The nav submenu appears when a menu
+                            item is hovered, but since it's contained within a set-width container block, I had to add
+                            a before & after pseudo-element to take up the space left and right, whilst keeping the margins
+                            of the submenu itself in tact.
+                        </p>
+                        <pre><code id="code-1" class="language-scss">
+.nav-submenu {
+    padding: 0 15px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    right: -15px;
+    z-index: 10;
+    list-style: none;
+    li {
+        float: left;
+        font-size: .8125rem;
+        text-transform: uppercase;
+        line-height: 2.813rem;
+        &:not(:first-child) {
+            padding-left: 20px;
+        }
+        &amp;:not(:last-child)::after {
+            content: "-";
+            padding-left: 20px;
+            color: $white;
+        }
+    }
+    &amp;::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 2000px;
+        background-color: $purple-2;
+    }
+    &amp;::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 2000px;
+        background-color: $purple-2;
+    }
+}
+                        </code></pre>
+                    </div>
                 </div>
             </div>
+            <!-- coming soon text -->
+            <!-- <div class="container">
+                <div class="inner">
+                    <div class="coming-soon">
+                        <h1>Coming Soon</h1>
+                    </div>
+                </div>
+            </div> -->
+            <!-- </div> -->
         </div>
-
-    </div>
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous">
     </script>
+    <script src="js/prism/prism.js"></script>
     <script src="js/main.js"></script>
     </body>
 </html>
