@@ -340,7 +340,7 @@
     $(document).ready(function(){
         $(".project").hover(
             function() {
-                $(this)
+                $('.project')
                 .children(".project-link")
                 .children(".project-image-contain")
                 .children(".video-container")
@@ -348,14 +348,14 @@
                 .get(0)
                 .play();
             }, function() {
-                $(this)
+                $('.project')
                 .children(".project-link")
                 .children(".project-image-contain")
                 .children(".video-container")
                 .children("video")
                 .get(0)
                 .pause();
-                $(this)
+                $('.project')
                 .children(".project-link")
                 .children(".project-image-contain")
                 .children(".video-container")
