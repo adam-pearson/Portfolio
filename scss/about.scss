@@ -19,11 +19,15 @@
 }
 
 .about-section.container {
+    margin-top: 100px;
     flex: 1;
     flex-direction: column;
     h1, h2, p {
         color: $white;
         overflow: hidden;
+    }
+    @include media-md {
+        margin-top: 0;
     }
 }
 

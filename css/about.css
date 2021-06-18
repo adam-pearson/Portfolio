@@ -727,6 +727,7 @@ select:-webkit-autofill:focus {
 }
 
 .about-section.container {
+  margin-top: 100px;
   flex: 1;
   flex-direction: column;
 }
@@ -734,6 +735,12 @@ select:-webkit-autofill:focus {
 .about-section.container h1, .about-section.container h2, .about-section.container p {
   color: #fff;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .about-section.container {
+    margin-top: 0;
+  }
 }
 
 .about.inner {
