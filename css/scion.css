@@ -795,6 +795,7 @@ select:-webkit-autofill:focus {
     background: url("/resources/img/coding-scs-photo.jpeg");
     background-size: cover;
     background-position: center;
+    box-shadow: 0 0 15px rgba(25, 25, 25, 0.1);
   }
   .intro.pair .img-overlay {
     height: 400px;
@@ -842,6 +843,7 @@ select:-webkit-autofill:focus {
     background: url("/resources/img/treehouse-scs.jpg");
     background-size: cover;
     background-position: center;
+    box-shadow: 0 0 15px rgba(25, 25, 25, 0.1);
   }
   .treehouse.pair .img-overlay {
     height: 400px;
@@ -898,6 +900,7 @@ select:-webkit-autofill:focus {
     background: url("/resources/img/netmatters-office.jpg");
     background-size: cover;
     background-position: center;
+    box-shadow: 0 0 15px rgba(25, 25, 25, 0.1);
   }
   .netmatters.pair .img-overlay {
     height: 400px;
