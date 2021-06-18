@@ -1318,6 +1318,15 @@ select:-webkit-autofill:focus {
   /*IE 10+*/
 }
 
+.btn-contact {
+  color: #fff;
+  font-family: paralucent, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
 .contact-field {
   background-color: #fff;
   border: 1px solid #3e3e3e;

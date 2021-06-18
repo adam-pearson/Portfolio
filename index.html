@@ -271,31 +271,32 @@
                         sadipscing elitr, sed diam nonumy eirmod 
                         tempor invidunt ut labore et dolore.</p>
                 </div>
-                <div class="contact-form-contain">
-                    <div class="contact-form formgroup name">
+                <form name="contact" method="get" class="contact-form-contain" onsubmit="return false">
+                    <formgroup class="contact-form formgroup name">
                         <input class="contact-field" id="first-name" name="first-name" type="text">
-                        <label class="fn-label" for="first-name" class="required">First name</label>
+                        <label class="fn-label required" for="first-name" class="required">First name</label>
                         <input class="contact-field" id="last-name" name="last-name" type="text">
-                        <label class="ln-label" for="last-name" class="required">Last name</label>
-                    </div>
-                    <div class="contact-form formgroup">
+                        <label class="ln-label required" for="last-name" class="required">Last name</label>
+                    </formgroup>
+                    <formgroup class="contact-form formgroup">
                         <input class="contact-field" id="email" name="email" type="email">
                         <label for="email" class="required">Email</label>
-                    </div>
-                    <div class="contact-form formgroup">
+                    </formgroup>
+                    <formgroup class="contact-form formgroup">
                         <input class="contact-field" id="subject" name="subject" type="text" autocomplete="off">
-                        <label for="subject">Subject</label> 
-                    </div>
-                    <div class="contact-form formgroup">
+                        <label class="required" for="subject">Subject</label> 
+                    </formgroup>
+                    <formgroup class="contact-form formgroup">
                         <textarea class="contact-field message" id="message" name="message" rows="10" autocomplete="off"></textarea>
-                        <label for="first-name">Message</label>
-                    </div>  
-                    <div class="contact-form contact-button">
-                        <button class="btn btn-contact">
+                        <label class="required" for="first-name">Message</label>
+                    </formgroup>  
+                    <formgroup class="contact-form contact-button">
+                        <!-- <button class="btn btn-contact">
                             <span>Submit</span>
-                        </button>
-                    </div>
-            </div>
+                        </button> -->
+                        <input type="submit" class="btn btn-contact" onclick="sendContact();">
+                    </formgroup>
+                </form>
         </div>
         <!-- Back to Top -->
         <div class="btt container ">
