@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio from netmatters course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-pearson/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adam-pearson/Portfolio/issues"
+  },
+  "homepage": "https://github.com/adam-pearson/Portfolio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.1"
+  },
+  "dependencies": {
+    "gulp-uglifycss": "^1.1.0"
+  }
+}
