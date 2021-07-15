@@ -7,6 +7,7 @@
     <title>Adam Pearson - Portfolio</title>
     <link rel="shorcut icon" href="resources/img/favicon.ico">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="js/prism/prism.css">
     <link rel="stylesheet" href="css/coding.css">
     <link rel="stylesheet" href="https://use.typekit.net/idk1wud.css">
@@ -193,6 +194,56 @@ $(window).resize(function() {
     }
 });
                         </code></pre>
+                        <h2>SQL Query</h2>
+                        <p>This SQL query is designed to return all movies, alongside its actors
+                           and average rating, which have a higher average rating than another specified 
+                           movie (in this case American Beauty). 
+                        </p>
+                        <pre><code id="code-1" class="language-sql">SELECT mv.mov_title AS "Movie Title",
+       act.act_fname || ' ' || act.act_lname AS "Actor Name", 
+       AVG(rt.rev_stars) AS "Average Rating"
+FROM movie AS mv
+JOIN movie_cast AS mv_cst ON mv_cst.mov_id = mv.mov_id
+JOIN actor AS act ON act.act_id = mv_cst.act_id
+JOIN rating AS rt ON rt.mov_id = mv.mov_id
+WHERE AVG(rt.rev_stars) > (
+    SELECT AVG(rating.rev_stars)
+    FROM rating
+    JOIN movie ON movie.mov_id = rating.mov_id
+    GROUP BY movie.mov_id
+    HAVING movie.mov_title = 'American Beauty'
+) 
+ORDER BY mv.mov_title ASC;
+                        </code></pre>
+                        <p>This code returns the following data from the database:</p>
+                        <table id="sql-table" class="display">
+                            <thead>
+                            <tr>
+                                <th>Movie Title</th>
+                                <th>Actors</th>
+                                <th>Average Rating</th>
+                            </tr>	</thead>	<tbody>	<tr>
+                                <td>Lorem Ipsum</td>
+                                <td>Lorem</td>
+                                <td>9.21</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem Ipsum</td>
+                                <td>Lorem</td>
+                                <td>8.33</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem Ipsum</td>
+                                <td>Lorem</td>
+                                <td>5.22</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem Ipsum</td>
+                                <td>Lorem</td>
+                                <td>4.50</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -211,7 +262,20 @@ $(window).resize(function() {
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous">
     </script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="js/prism/prism.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#sql-table').DataTable({
+                paging: false,
+                ordering: false,
+                searching: false,
+                autoWidth: true,
+                info: false
+            });
+        } );
+    </script>
     </body>
 </html>

@@ -1,0 +1,32 @@
+ACTOR
+act_id | act_fname | act_lname | act_gender
+
+MOVIE_CAST
+act_id | mov_id | role
+
+MOVIE
+mov_id | mov_title | mov_year | mov_time | mov_lang | mov_dt_rel | mov_rel_country
+
+DIRECTOR
+dir_id | dir_fname | dir_lname
+
+MOVIE_DIRECTION
+dir_id | mov_id
+
+MOVIE_CAST
+act_id | mov_id | role
+
+REVIEWER
+rev_id | rev_name
+
+RATING
+mov_id | rev_id | rev_stars | num_o_ratings
+
+_____________________________________________________
+
+Return all movies, with the actors, of all films with a higher average rating than American Beauty
+
+SELECT *
+FROM movie as mv
+JOIN movie_direction AS mv_dr ON mv_dr.mov_id = mv.mov_id
+JOIN director AS dr ON dr.dir_id = mv_dr.dir_id

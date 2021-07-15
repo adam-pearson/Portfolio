@@ -36,17 +36,43 @@
     h2 {
         margin-top: 10px;
         margin-bottom: 10px;
+        &:nth-of-type(n+2) {
+            margin-top: 50px;
+        }
     }
     p {
         margin-top: 10px;
         margin-bottom: 10px;
     }
     pre {
-        height: 60vh;
+        max-height: 60vh;
         margin-top: 15px;
         .token.important {
             font-weight: normal;
             color: $white;
         }
+    }
+}
+
+pre.language-sql {
+    margin-bottom: 25px;
+}
+
+#sql-table {
+    font-family: 'Roboto', sans-serif; 
+    width: 100%;
+    border-bottom: none;
+    box-shadow: 0 0 5px fade-out($black,.9);
+    margin-top: 25px;
+    th {
+        font-weight: 400;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: $primary-colour;
+        color: $white;
+        border-bottom: none;
+    }
+    td {
+        font-weight: 300;
     }
 }
