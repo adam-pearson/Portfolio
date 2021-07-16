@@ -1,18 +1,23 @@
-SELECT mv.mov_title AS "Movie Title",
-       act.act_fname || ' ' || act.act_lname AS "Actor Name"
- 
+SELECT DISTINCT mv.mov_title AS "Movie Title",
+       dr.dir_fname || ' ' || dr.dir_lname AS "Director",
+       rt.rev_stars AS "Rating"
 FROM movie AS mv
 
 JOIN movie_cast AS mv_cst ON mv_cst.mov_id = mv.mov_id
-JOIN actor AS act ON act.act_id = mv_cst.act_id
 JOIN rating AS rt ON rt.mov_id = mv.mov_id
+JOIN movie_direction AS mv_dr ON mv_dr.mov_id = mv.mov_id
+JOIN director AS dr ON dr.dir_id = mv_dr.dir_id
 
-WHERE AVG(rt.rev_stars) > (
-    SELECT AVG(rating.rev_stars)
+WHERE rt.rev_stars > (
+    SELECT rating.rev_stars
     FROM rating
     JOIN movie ON movie.mov_id = rating.mov_id
-    GROUP BY movie.mov_id
-    HAVING movie.mov_title = 'American Beauty'
+    WHERE movie.mov_title = 'American Beauty'
 ) 
+AND mv.mov_year > (
+    SELECT mov_year
+    FROM movie
+    WHERE movie.mov_title = 'Lawrence of Arabia'
+)
 
 ORDER BY mv.mov_title ASC;
