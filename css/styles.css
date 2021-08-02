@@ -924,6 +924,7 @@ select:-webkit-autofill:focus {
     font-size: 1.6rem;
     bottom: 10px;
     left: 15px;
+    line-height: 1.1;
   }
 }
 
@@ -1030,12 +1031,12 @@ select:-webkit-autofill:focus {
 }
 
 .project .project-image-contain .project-image.background-2 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/LCUBcJ0.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/assigner_mockups.png");
   background-size: cover;
 }
 
 .project .project-image-contain .project-image.background-3 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/LCUBcJ0.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/resources/img/axure_project.png");
   background-size: cover;
 }
 

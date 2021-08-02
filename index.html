@@ -174,11 +174,6 @@
                     <a class="project-link" target="_blank" href="https://netmatters.adam-pearson.netmatters-scs.co.uk">
                         <div class="project-image-contain">
                             <div class="project-image background-1"></div>
-                            <div class="video-container video-1">
-                                <video loop preload="auto" muted>
-                                    <source src="resources/vid/Netmatters.mp4" type="video/mp4">
-                                </video>                                    
-                            </div>  
                         </div>
                     </a>
                     <a class="project-links" target="_blank" href="https://netmatters.adam-pearson.netmatters-scs.co.uk">
@@ -189,27 +184,27 @@
                     </a>
                 </li>
                 <li class="project card-2">
-                    <a class="project-link" target="_blank">
+                    <a class="project-link" target="_blank" href="https://adam-pearson.github.io/JavaScript-Reflection---Challenge-2/">
                         <div class="project-image-contain">
                             <div class="project-image background-2"></div>
                         </div>
                     </a>
-                    <a class="project-links">
+                    <a class="project-links" target="_blank" href="https://adam-pearson.github.io/JavaScript-Reflection---Challenge-2/">
                         <div class="video-grad"></div>
-                        <h2>Project Two</h2>
+                        <h2>JavaScript Image Assigner</h2>
                         <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
                         <div class="text-background"></div>
                     </a>
                 </li>
                 <li class="project card-3">
-                    <a class="project-link" target="_blank">
+                    <a class="project-link" target="_blank" href="https://spiaa4.axshare.com/#id=h50q68&p=store_page">
                         <div class="project-image-contain">
                             <div class="project-image background-3"></div>
                         </div>
                     </a>
-                    <a class="project-links">
+                    <a class="project-links" target="_blank" href="https://spiaa4.axshare.com/#id=h50q68&p=store_page">
                         <div class="video-grad"></div>
-                        <h2>Project Three</h2>
+                        <h2>Ecommerce Prototype</h2>
                         <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
                         <div class="text-background"></div>
                     </a>
@@ -222,7 +217,7 @@
                             </div>  
                         </div>
                     </a>
-                    <a class="project-links">
+                    <a class="project-links" target="_blank">
                         <div class="video-grad"></div>
                         <h2>Project Four</h2>
                         <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
@@ -235,20 +230,20 @@
                             <div class="project-image background-5"></div> 
                         </div>
                     </a>
-                    <a class="project-links">
+                    <a class="project-links" target="_blank">
                         <div class="video-grad"></div>
                         <h2>Project Five</h2>
                         <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
                         <div class="text-background"></div>
                     </a>
                 </li>
-                <li class="project card-6" target="_blank">
-                    <a class="project-link">
+                <li class="project card-6">
+                    <a class="project-link" target="_blank">
                         <div class="project-image-contain">
                             <div class="project-image background-6"></div> 
                         </div>
                     </a>
-                    <a class="project-links">
+                    <a class="project-links" target="_blank">
                         <div class="video-grad"></div>
                         <h2>Project Six</h2>
                         <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
@@ -332,38 +327,5 @@
         .typeString('<h2 class="strapline">I\'m a Web Developer')
         .start();
 </script>
-<!-- Video play on hover -->
-<script > 
-    $(document).ready(function(){
-        $(".project").hover(
-            function() {
-                $('.project')
-                .children(".project-link")
-                .children(".project-image-contain")
-                .children(".video-container")
-                .children("video")
-                .get(0)
-                .play();
-            }, function() {
-                $('.project')
-                .children(".project-link")
-                .children(".project-image-contain")
-                .children(".video-container")
-                .children("video")
-                .get(0)
-                .pause();
-                $('.project')
-                .children(".project-link")
-                .children(".project-image-contain")
-                .children(".video-container")
-                .children("video")
-                .get(0)
-                .currentTime = 0;
-        });
-    });
-
-
-
-</script> 
 </body>
 </html>

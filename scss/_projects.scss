@@ -50,6 +50,7 @@
             font-size: 1.6rem;
             bottom: 10px;
             left: 15px;
+            line-height: 1.1;
         }
     }
     h3 {
@@ -137,10 +138,10 @@
                 @include project-image($url:'/resources/img/netmatters_page.jpg');
             }
             &.background-2 {
-                @include project-image($url:'/resources/img/LCUBcJ0.png');
+                @include project-image($url:'/resources/img/assigner_mockups.png');
             }
             &.background-3 {
-                @include project-image($url:'/resources/img/LCUBcJ0.png');
+                @include project-image($url:'/resources/img/axure_project.png');
             }
             &.background-4 {
                 @include project-image($url:'/resources/img/LCUBcJ0.png');
