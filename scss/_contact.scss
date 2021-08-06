@@ -37,12 +37,29 @@
     }
 }
 
-.contact-form {
+fieldset.contact-form {
+    padding: 0;
+    border: none;
     margin-top: 10px;
     &:not(:first-child) {
         margin-top: 15px;
     }
 
+}
+
+.svg-container {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    @include media-md {
+        display: flex;
+    }
+}
+
+.email-svg {
+    margin-top: 35px;
+    width: 82%;
+    height: 100%;
 }
 
 .contact-text-contain {
@@ -62,7 +79,7 @@
     }
     @include media-sm {
         max-width: 50%;
-        padding-right: 10px;
+        padding-right: 35px;
         a > h2 {
             font-size: 3.3vw;
         }
