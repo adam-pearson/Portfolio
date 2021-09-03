@@ -11,9 +11,8 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./css'));
 });
 
- //uglify css
-
-gulp.task('css', async function () {
+// uglify css
+gulp.task('css', function () {
   gulp.src('./css/*.css')
     .pipe(uglifycss({
       "uglyComments": true
