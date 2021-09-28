@@ -208,3 +208,23 @@ label {
         color: $primary-colour;
     }
 }
+
+.form-message {
+    width: 100%;
+    background-color: #bbb;
+    color: #fff;
+    display: flex;
+    padding: .05rem 1rem;
+    justify-content: space-between;
+}
+
+.close-message {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: $secondary-colour;
+    transition: .2s ease all;
+    &:hover {
+        color: $white;
+    }
+}

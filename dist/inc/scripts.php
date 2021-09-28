@@ -5,6 +5,7 @@
 
     <script src="/node_modules/typewriter-effect/dist/core.js"></script>
     <script src="dist/js/typewriter.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async=""></script>
 
 <?php }elseif (strpos($uri, "/coding") !== false) { ?>
 
