@@ -70,6 +70,8 @@
                 <a class="project-link" target="_blank" href="https://wordpress.adampearson.design">
                     <div class="project-image-contain">
                         <div class="project-image background-4"></div>
+                        <div class="video-container video-4">                                   
+                        </div>  
                     </div>
                 </a>
                 <a class="project-links" target="_blank" href="https://wordpress.adampearson.design">

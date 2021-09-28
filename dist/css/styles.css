@@ -625,7 +625,6 @@ select:-webkit-autofill:focus {
 .social-links .social {
   padding-top: 15px;
   padding-bottom: 15px;
-  transition: 0.3s ease all;
 }
 .social-links .social:hover {
   transform: scale(1.4);
@@ -1098,27 +1097,27 @@ select:-webkit-autofill:focus {
   position: relative;
 }
 .project .project-image-contain .project-image.background-1 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/netmatters_page.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/dist/assets/img/netmatters_page.jpg");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-2 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/assigner_mockups.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/dist/assets/img/assigner_mockups.png");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-3 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/axure_project.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/dist/assets/img/axure_project.png");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-4 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/notreble.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/dist/assets/img/LCUBcJ0.png");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-5 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/bakersdozen.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/dist/assets/img/LCUBcJ0.png");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-6 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/LCUBcJ0.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.25) 60%), url("/dist/assets/img/LCUBcJ0.png");
   background-size: cover;
 }
 .project .project-links {
@@ -1154,6 +1153,35 @@ select:-webkit-autofill:focus {
     margin: 5px;
     padding: 0;
   }
+}
+
+/* video that displays when hovering over project */
+.video-container,
+.video-grad {
+  display: none;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-container video {
+  height: 100%;
+  width: 100%;
+}
+
+.video-grad {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.58) 70%);
+  transition: 0.3s ease all;
 }
 
 .contact-section {
@@ -1393,25 +1421,5 @@ label {
 label.required::after {
   content: "*";
   color: #ef7b1b;
-}
-
-.form-message {
-  width: 100%;
-  background-color: #bbb;
-  color: #fff;
-  display: flex;
-  padding: 0.05rem 1rem;
-  justify-content: space-between;
-}
-
-.close-message {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #21244a;
-  transition: 0.2s ease all;
-}
-.close-message:hover {
-  color: #fff;
 }
 /*# sourceMappingURL=maps/styles.css.map */

@@ -340,7 +340,6 @@ select:-webkit-autofill:focus {
 .social-links .social {
   padding-top: 15px;
   padding-bottom: 15px;
-  transition: 0.3s ease all;
 }
 .social-links .social:hover {
   transform: scale(1.4);

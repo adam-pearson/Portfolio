@@ -161,14 +161,12 @@ margin: 20px 0;
     padding: 0 15px;
     font-size: 1.4rem;
     justify-content: space-between;
-    
     a {
         color: $primary-colour;
     }
     .social {
         padding-top: 15px;
         padding-bottom: 15px;
-        transition: .3s ease all;
         &:hover {
             transform: scale(1.4);
             a {

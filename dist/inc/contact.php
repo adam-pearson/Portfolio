@@ -1,28 +1,3 @@
-    <?php
-    
-    require __DIR__ . '/../../vendor/autoload.php';
-    require __DIR__ . '/connection.php';
-    require __DIR__ . '/functions.php';
-
-    if (isset($_POST['submit'])) {
-
-        $dt = new DateTime();
-        $dt->setTimeZone(new DateTimeZone("Europe/London"));
-        $date_time = $dt->format("Y-m-d H:i:s");    
-
-        $validationArray = validateForm();
-        $message = createMessage($validationArray);
-        if ($validationArray["passed"]) {
-            $contactArray = $validationArray["array"];
-            postContact($db, $contactArray);
-        } else {
-            $errorArray = $validationArray["array"];
-        }
-    }
-
-
-    ?>
-    
     <!-- Contact -->
     <div id="contact" class="contact-section container">
         <div class="contact-inner inner">
@@ -69,13 +44,7 @@
                     </svg>
                 </div>
             </div>
-            <form name="contact" method="post" class="contact-form-contain" action="/">
-                
-                <div class="form-message">
-                    <p><?php if (isset($_POST['submit'])) echo $message?></p>
-                    <button type="button" id="close-message" class="close-message"><i class="fas fa-times"></i></button>
-                </div>
-
+            <form name="contact" method="get" class="contact-form-contain" onsubmit="return false">
                 <fieldset class="contact-form formgroup name">
                     <input class="contact-field" id="first-name" name="first-name" type="text">
                     <label class="fn-label required" for="first-name">First name</label>
@@ -93,19 +62,16 @@
                 <fieldset class="contact-form formgroup">
                     <textarea class="contact-field message" id="message" name="message" rows="10" autocomplete="off"></textarea>
                     <label class="required" for="first-name">Message</label>
-                </fieldset>
-                <fieldset class="contact-form formgroup">
-                    <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_SITE'] ?>"></div>
-                </fieldset>
+                </fieldset>  
                 <fieldset class="contact-form contact-button">
-                    <input type="submit" class="btn btn-contact" name="submit" onclick="sendContact();">
+                    <input type="submit" class="btn btn-contact" onclick="sendContact();">
                 </fieldset>
             </form>
         </div>
         <!-- Back to Top -->
         <div class="btt container ">
             <div class="back-to-top inner">
-                <a href="index.php#" class="scroll-up-link">
+                <a href="#" class="scroll-up-link">
                     <div class="scroll-top">
                         <i class="fas fa-chevron-up"></i>
                         <p><strong>Back to Top</strong></p>
