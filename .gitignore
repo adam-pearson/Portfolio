@@ -2,3 +2,4 @@
 portfolio.zip
 /.vscode/
 /vendor/
+*.env
