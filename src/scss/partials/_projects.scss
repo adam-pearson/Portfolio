@@ -144,10 +144,10 @@
                 @include project-image($url:'/dist/assets/img/axure_project.png');
             }
             &.background-4 {
-                @include project-image($url:'/dist/assets/img/LCUBcJ0.png');
+                @include project-image($url:'/dist/assets/img/notreble.jpg');
             }
             &.background-5 {
-                @include project-image($url:'/dist/assets/img/LCUBcJ0.png');
+                @include project-image($url:'/dist/assets/img/bakersdozen.png');
             }
             &.background-6 {
                 @include project-image($url:'/dist/assets/img/LCUBcJ0.png');
@@ -179,36 +179,5 @@
         padding: 0;
     }
 }
-
-/* video that displays when hovering over project */
-
-
-.video-container,
-.video-grad {
-    display: none;
-}
-
-.video-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    video {
-        height: 100%;
-        width: 100%;
-    }
-}
-.video-grad {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    background-image: $video-grad;
-    transition: .3s ease all;
-}
-
 
 
