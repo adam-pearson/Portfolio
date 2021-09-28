@@ -1,9 +1,9 @@
-@import "variables";
-@import "mixins";
-@import "basic";
-@import "sidebar";
-@import "header";
-@import "keyframes";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/basic";
+@import "partials/sidebar";
+@import "partials/header";
+@import "partials/keyframes";
 
 .whole-page.container {
     background-color: #21244a;

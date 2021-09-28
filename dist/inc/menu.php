@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Pearson - Portfolio</title>
-    <link rel="shorcut icon" href="resources/img/favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="https://use.typekit.net/idk1wud.css">
-    <script src="https://kit.fontawesome.com/9d6ccdf40f.js" crossorigin="anonymous"></script>
-</head>
-<body>
     <!-- Sidebar Nav -->
     <div id="sidebar" class="sidebar">
 
@@ -22,7 +8,7 @@
                 </button>
             </div>
             <div id="sidebar-logo" class="sidebar-logo">
-                    <a href="index.html">
+                    <a href="/index.php">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         width="219.33px" height="219.33px" viewBox="0 0 219.33 219.33" style="enable-background:new 0 0 219.33 219.33;"
                         xml:space="preserve">
@@ -75,19 +61,19 @@
         <nav>
             <ul>
                 <li class="nav link-container">
-                    <a class="nav-link underline" href="about.html">About Me</a>
+                    <a class="nav-link underline" href="/about.php">About Me</a>
                 </li>
                 <li class="nav link-container">
-                    <a class="nav-link underline" href="index.html#projects">My Portfolio</a>
-                </diliv>
-                <li class="nav link-container">
-                    <a class="nav-link underline" href="coding.html">Coding Examples</a>
+                    <a class="nav-link underline" href="/index.php#projects">My Portfolio</a>
                 </li>
                 <li class="nav link-container">
-                    <a class="nav-link underline" href="scion.html">SCS Scheme</a>
+                    <a class="nav-link underline" href="/coding.php">Coding Examples</a>
+                </li>
+                <li class="nav link-container">
+                    <a class="nav-link underline" href="/scion.php">SCS Scheme</a>
                 </li>
                 <li class="nav link-container contact-container">
-                    <a class="contact-link underline" href="index.html#contact">Contact Me</a>
+                    <a class="contact-link underline" href="/index.php#contact">Contact Me</a>
                 </li>
                 <li id="socials" class="social-links">
                     <div class="social facebook-contain">
@@ -115,95 +101,3 @@
         </nav>
     </div>
     <div class="overlay"></div>
-    <!-- Page Container -->
-    <div class="whole-page container">
-        <!-- Header -->
-        <div id="top" class="header container">
-            <div class="header-inner">
-                <div class="logo-container">
-                    <a href="index.html">
-                        <img class="main-logo" src="resources/img/optimised_logo.svg" alt="Adam Pearson monogram logo">
-                    </a>
-                </div>
-                <div class="header-buttons">
-                    <div>
-                        <a href="index.html#contact">
-                            <div class="btn contact">
-                                <span>Contact</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <button id="burger" type="button" class="btn burger">
-                            <span class="burger-inner">
-                                <span class="burger-lines"></span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About -->
-        <div class="about-section container">
-            <div class="about inner">
-                <div class="photo-container">
-                    <img src="resources/img/avatar.png" alt="Photo of myself"> 
-                </div>
-                <div class="text-container">
-                    <h1>Hi, I'm Adam.</h1>
-                    <h2 class="strapline">I help make visions come to life!</h2>
-                    <p>I'm a UK-based graphic designer & web developer, currently based in Manchester. After obtaining my
-                        degree in graphic design I worked in the field full-time until 2021, when I happened upon the opportunity to try
-                        something new. I started a web development course, turning my career to a new direction. When I'm not working, 
-                        I can usually be found off on a hill taking photos of the landscape, or playing one of the (far too many) 
-                        instruments I own.
-                    </p>
-                </div>
-                <div class="about-icons">
-                    <div class="icons-container">
-                        <div class="design">
-                            <div class="icon icon-design">
-                                <i class="fas fa-pen-fancy"></i>
-                            </div>
-                            <div class="icon-text text-design">
-                                <h3>Design</h3>
-                            </div>
-                        </div>
-                        <div class="html">
-                            <div class="icon icon-html">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <div class="icon-text text-html">
-                                <h3>HTML</h3>
-                            </div>
-                        </div>
-                        <div class="css">
-                            <div class="icon icon-css">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <div class="icon-text text-css">
-                                <h3>CSS</h3>
-                            </div>
-                        </div>
-                        <div class="sass">
-                            <div class="icon icon-sass">
-                                <i class="fab fa-sass"></i>
-                            </div>
-                            <div class="icon-text text-sass">
-                                <h3>Sass</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous">
-    </script>
-    <script src="js/main.js"></script>
-</body>
-</html>

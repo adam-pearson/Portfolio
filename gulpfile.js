@@ -1,31 +1,24 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var uglifycss = require('gulp-uglifycss');
+var gulp = require("gulp"),
+    babel = require("gulp-babel"),
+    sass = require('gulp-sass')(require('sass')),
+    sourcemaps = require('gulp-sourcemaps'),
+    concat = require('gulp-concat');
 
-sass.compiler = require('node-sass');
-
-//convert sass to css
-gulp.task('sass', function () {
-  return gulp.src('./scss/*.scss')
+gulp.task("styles", function () {
+    return gulp.src('./src/scss/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./dist/css'));
 });
 
-// uglify css
-gulp.task('css', function () {
-  gulp.src('./css/*.css')
-    .pipe(uglifycss({
-      "uglyComments": true
-    }))
-    .pipe(gulp.dest('./dist/'));
-});
-
-
-gulp.task('run', gulp.series('sass','css'));
+gulp.task("babel", function () {
+    return gulp.src("./src/js/**/*.js")
+      .pipe(babel({presets: ['@babel/env']}))
+      .pipe(gulp.dest("./dist/js"));
+  });
 
 gulp.task('watch', function() {
-    gulp.watch('./scss/*.scss', gulp.series('sass'));
-    gulp.watch('./css/*.css', gulp.series('css'));
+    gulp.watch('./src/js/**/*.js', gulp.series('babel'));
+    gulp.watch('./src/scss/**/*.scss', gulp.series('styles'));
 });
-
-gulp.task('default', gulp.series('run', 'watch'));
