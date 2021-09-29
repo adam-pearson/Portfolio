@@ -32,7 +32,6 @@ function sendMail($contactArray) {
         $mail->SetFrom('adam@adampearson.design', 'Adam Pearson');
         $mail->addAddress("adam.pearson94@gmail.com", "Adam Pearson");
         $mail->addAddress("adam@adampearson.design", "Adam Pearson");
-        $mail->addAddress($email, "$first_name $last_name");
         $mail->IsHTML(true);
         $mail->CharSet = 'UTF-8';
 
