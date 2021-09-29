@@ -14,7 +14,7 @@ $user = $_ENV['DB_USER'];
 $pass = $_ENV['DB_PASS'];
 
 try {
-    $db = new PDO("$dsn:host=$host;port=$port;dbname=$dbname", $user, $pass);
+    $db = new PDO("$dsn:host=$host;port=$port;dbname=$dbname;charset=utf8", $user, $pass);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (Exception $e) {
     echo "Unable to connect - ";

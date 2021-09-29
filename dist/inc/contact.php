@@ -71,7 +71,7 @@
                     </svg>
                 </div>
             </div>
-            <form name="contact" method="post" class="contact-form-contain" action="/">
+            <form name="contact" method="post" class="contact-form-contain" action="/" accept-charset="utf-8">
                 
                 <div id="form-message" class="form-message <?php if (isset($_POST['submit'])) echo $status = isset($contactArray) ? 'success' : 'error'?>">
                     <p id="form-message-text"><?php if (isset($_POST['submit'])) echo $message?></p>
