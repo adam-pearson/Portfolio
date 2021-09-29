@@ -87,4 +87,19 @@ $('.nav a[href*="#contact"]').on('click', function () {
   };
 
   window.addEventListener('scroll', checkScroll);
-})();
+})(); // control the form message
+
+
+var formMsg = document.getElementById("form-message");
+var closeMsg = document.getElementById("close-message");
+closeMsg.addEventListener("click", function () {
+  formMsg.className = "form-message";
+}); // if the form message exists, scroll to it
+
+(function scrollToMessage() {
+  if (formMsg.classList.contains("error") || formMsg.classList.contains("success")) {
+    setTimeout(function () {
+      window.location = ("" + window.location).replace(/#[A-Za-z0-9_-]*$/, '') + "#form-message";
+    }, 1);
+  }
+})(); //validate the form

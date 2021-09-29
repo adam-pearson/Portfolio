@@ -74,7 +74,7 @@
                 </a>
                 <a class="project-links" target="_blank" href="https://wordpress.adampearson.design">
                     <div class="video-grad"></div>
-                    <h2>Project Four</h2>
+                    <h2>WooCommerce Site</h2>
                     <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
                     <div class="text-background"></div>
                 </a>
@@ -87,7 +87,7 @@
                 </a>
                 <a class="project-links" target="_blank" href="https://bakersdozen.adampearson.design">
                     <div class="video-grad"></div>
-                    <h2>Project Five</h2>
+                    <h2>Pairs Project</h2>
                     <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
                     <div class="text-background"></div>
                 </a>

@@ -71,7 +71,7 @@
             </div>
             <form name="contact" method="post" class="contact-form-contain" action="/">
                 
-                <div class="form-message">
+                <div id="form-message" class="form-message <?php echo $status = isset($contactArray) ? 'success' : 'error'?>">
                     <p><?php if (isset($_POST['submit'])) echo $message?></p>
                     <button type="button" id="close-message" class="close-message"><i class="fas fa-times"></i></button>
                 </div>
