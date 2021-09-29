@@ -2,6 +2,7 @@
     
     require __DIR__ . '/../../vendor/autoload.php';
     require __DIR__ . '/connection.php';
+    require __DIR__ . '/mailer.php';
     require __DIR__ . '/functions.php';
 
     if (isset($_POST['submit'])) {
@@ -15,6 +16,7 @@
         if ($validationArray["passed"]) {
             $contactArray = $validationArray["array"];
             postContact($db, $contactArray);
+            sendMail($contactArray);
         } else {
             $errorArray = $validationArray["array"];
         }
@@ -71,8 +73,8 @@
             </div>
             <form name="contact" method="post" class="contact-form-contain" action="/">
                 
-                <div id="form-message" class="form-message <?php echo $status = isset($contactArray) ? 'success' : 'error'?>">
-                    <p><?php if (isset($_POST['submit'])) echo $message?></p>
+                <div id="form-message" class="form-message <?php if (isset($_POST['submit'])) echo $status = isset($contactArray) ? 'success' : 'error'?>">
+                    <p id="form-message-text"><?php if (isset($_POST['submit'])) echo $message?></p>
                     <button type="button" id="close-message" class="close-message"><i class="fas fa-times"></i></button>
                 </div>
 
@@ -95,10 +97,10 @@
                     <label class="required" for="first-name">Message</label>
                 </fieldset>
                 <fieldset class="contact-form formgroup">
-                    <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_SITE'] ?>"></div>
+                    <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="<?php echo $_ENV['RECAPTCHA_SITE'] ?>"></div>
                 </fieldset>
                 <fieldset class="contact-form contact-button">
-                    <input type="submit" class="btn btn-contact" name="submit" onclick="sendContact();">
+                    <input type="submit" id="submit" class="btn btn-contact" name="submit">
                 </fieldset>
             </form>
         </div>

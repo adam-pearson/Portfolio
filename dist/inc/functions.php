@@ -59,6 +59,7 @@ function curl_get_file_contents($URL) {
 // verify and post contact form data
 
 function validateForm() {
+    $emailRegex = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/';
     $contactArray = [];
     $errorArray = [];
     // test if each field is set or not empty, add it to 
@@ -72,7 +73,9 @@ function validateForm() {
     } else {
         $errorArray[] = "last name";
     }
-    if (!empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    if (!empty($_POST['email'])
+    && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)
+    && preg_match($emailRegex, $_POST['email'])) {
         $email = $_POST['email'];
     } else {
         $errorArray[] = "email";

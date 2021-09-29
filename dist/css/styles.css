@@ -1395,6 +1395,11 @@ label.required::after {
   color: #ef7b1b;
 }
 
+input.error,
+textarea.error {
+  border: 1px solid tomato;
+}
+
 .form-message {
   display: none;
   width: 100%;
