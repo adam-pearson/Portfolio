@@ -92,19 +92,6 @@
                     <div class="text-background"></div>
                 </a>
             </li>
-            <li class="project card-6">
-                <a class="project-link" target="_blank" href="#">
-                    <div class="project-image-contain">
-                        <div class="project-image background-6"></div> 
-                    </div>
-                </a>
-                <a class="project-links" target="_blank" href="#">
-                    <div class="video-grad"></div>
-                    <h2>Project Six</h2>
-                    <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
-                    <div class="text-background"></div>
-                </a>
-            </li>
         </ul>
     </div>
 
