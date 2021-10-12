@@ -12,6 +12,8 @@ $uri = $_SERVER['REQUEST_URI'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Conditionals to serve different stylesheets -->
 
+    <link type="text/css" rel="stylesheet" href="dist/css/normalize.css">
+
     <?php if (strpos($uri, "/index") !== false || $uri == "/" || $uri == "") { ?>
     
         <title>Adam Pearson - Portfolio</title>
@@ -67,7 +69,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <?php } ?>
     
     <link type="text/css" rel="shorcut icon" href="dist/assets/img/favicon.ico">
-    <link type="text/css" rel="stylesheet" href="dist/css/normalize.css">
+    
     <link type="text/css" rel="stylesheet" href="https://use.typekit.net/idk1wud.css">
     <script src="https://kit.fontawesome.com/9d6ccdf40f.js" crossorigin="anonymous"></script>
 </head>
