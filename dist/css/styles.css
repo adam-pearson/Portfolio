@@ -865,7 +865,7 @@ select:-webkit-autofill:focus {
   height: calc(100vh - 90px);
   text-align: center;
   display: block;
-  background: url("/dist/assets/img/hero-image-min.jpg");
+  background: url("/dist/assets/img/hero-image-min.jpeg");
   background-size: cover;
 }
 @media (min-width: 768px) {
@@ -1098,23 +1098,23 @@ select:-webkit-autofill:focus {
   position: relative;
 }
 .project .project-image-contain .project-image.background-1 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/netmatters_page.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/netmatters_page.jpeg");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-2 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/assigner_mockups.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/assigner_mockups.jpeg");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-3 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/axure_project.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/axure_project.jpeg");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-4 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/notreble.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/notreble.jpeg");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-5 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/bakersdozen.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 24, 52, 0.5) 60%), url("/dist/assets/img/bakersdozen.jpeg");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-6 {

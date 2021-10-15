@@ -135,19 +135,19 @@
             transition: .3s ease transform;
             position: relative;
             &.background-1 {
-                @include project-image($url:'/dist/assets/img/netmatters_page.jpg');
+                @include project-image($url:'/dist/assets/img/netmatters_page.jpeg');
             }
             &.background-2 {
-                @include project-image($url:'/dist/assets/img/assigner_mockups.png');
+                @include project-image($url:'/dist/assets/img/assigner_mockups.jpeg');
             }
             &.background-3 {
-                @include project-image($url:'/dist/assets/img/axure_project.png');
+                @include project-image($url:'/dist/assets/img/axure_project.jpeg');
             }
             &.background-4 {
-                @include project-image($url:'/dist/assets/img/notreble.jpg');
+                @include project-image($url:'/dist/assets/img/notreble.jpeg');
             }
             &.background-5 {
-                @include project-image($url:'/dist/assets/img/bakersdozen.png');
+                @include project-image($url:'/dist/assets/img/bakersdozen.jpeg');
             }
             &.background-6 {
                 @include project-image($url:'/dist/assets/img/LCUBcJ0.png');
