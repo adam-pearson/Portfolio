@@ -1,0 +1,210 @@
+.contact-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.contact-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 0px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-sm {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.contact-form-contain {
+    display: flex;
+    flex-direction: column;
+    .contact-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        width: 100%;
+        .btn-contact {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            @include media-sm {
+                width: 35%;
+            }
+        }
+    }
+    @include media-sm {
+        width: 50%;
+    }
+}
+
+fieldset.contact-form {
+    padding: 0;
+    border: none;
+    margin-top: 10px;
+    &:not(:first-child) {
+        margin-top: 15px;
+    }
+
+}
+
+.svg-container {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    @include media-md {
+        display: flex;
+    }
+}
+
+.email-svg {
+    margin-top: 35px;
+    width: 82%;
+    height: 100%;
+}
+
+.contact-text-contain {
+    a > h2 {
+        margin: 5px auto;
+        font-size: 1.15rem;
+        &:hover {
+            color: $primary-colour;
+        }
+    }
+    p {
+        margin-top: 10px;
+    }
+    h2 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    @include media-sm {
+        max-width: 50%;
+        padding-right: 35px;
+        a > h2 {
+            font-size: 3.3vw;
+        }
+    }
+    @include media-md {
+        max-width: 50%;
+        a > h2 {
+            font-size: 1.2rem;
+        }
+    }
+    @include media-lg {
+        a > h2 {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.formgroup {
+    position: relative;
+    label {
+        position: absolute;
+        top: -11px;
+        left: 11px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: $white;
+    }
+    &.name input:nth-child(n+3) {
+        margin-top: 15px;
+    }
+    &.name .ln-label { 
+        top: 54px;
+    }
+    &.name {
+        @include media-lg {
+            display: flex;
+            margin-top: 0;
+            align-content: center;
+            .ln-label {
+                top: -11px;
+                left: 210px;
+            }
+            #last-name {
+                margin-top: 0;
+                margin-left: 15px;
+            }
+        }
+        @include media-xl {
+            .ln-label {
+                top: -11px;
+                left: 260px;
+            }
+        }
+        @include media-xxl {
+            .ln-label {
+                top: -11px;
+                left: 306px;
+            }
+        }
+    }
+}
+
+
+.btt {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.back-to-top {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 35px;
+
+    i {
+        padding-bottom: 10px;
+    }
+    p, i {
+        margin: 0;
+        text-shadow: none;
+    }
+    &:hover p, &:hover i{
+        color: $primary-colour;
+    }
+    &:hover i {
+        @include fade-out;
+    }
+}
+
+.btn-contact {
+    color: $white;
+    font-family: paralucent, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.contact-field {
+    background-color: $white;
+    border: 1px solid $dark-grey-2;
+    border-radius: 4px;
+    width: 100%;
+    padding: 5px 12px;
+    color: $dark-grey;
+    &:not(.message) {
+        height: 50px;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 2px rgba(202, 194, 186, 0.1);
+        border: 1px solid $primary-colour;
+        &+label {
+            color: $primary-colour;
+        }
+    }
+    &.message {
+        padding-top: 10px;
+    }
+}
+
+label {
+    font-size: .75rem;
+    &.required::after {
+        content: "*";
+        color: $primary-colour;
+    }
+}

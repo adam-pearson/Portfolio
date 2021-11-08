@@ -1,0 +1,33 @@
+$white: #fff;
+$black: #000;
+$light-grey: #eee;
+$light-grey-2: #ddd;
+$grey: #c9c9c9;
+$dark-grey: #505050 ;
+$dark-grey-2: #3e3e3e;
+
+$primary-colour: rgb(239,123,27);
+$primary-tint-1: rgb(243,146,53);
+$primary-tint-2: rgb(247,168,80);
+$primary-tint-3: rgb(250,189,107);
+
+$secondary-colour: rgb(33,36,74);
+$secondary-tint-1: rgb(52,50,95);
+$secondary-tint-2: rgb(72,69,121);
+$secondary-tint-3: rgb(95,93,152);
+
+$xs-width: 575px;
+$sm-width: 576px;
+$md-width: 768px;
+$lg-width: 992px;
+$xl-width: 1200px;
+$xxl-width: 1400px;
+
+/* used by the font awesome mixin */
+$fontawesome-font-face: "Font Awesome 5 Free";
+
+$animate: all 0.2s ease-in-out;
+
+/* gradient for project cards */
+$project-grad: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(22,24,52,.25) 60%);
+$video-grad: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(22,24,52,.58) 70%);

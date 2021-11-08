@@ -1,0 +1,78 @@
+.header.container {
+    height: 90px;
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 900;
+    transition: .15s ease all;
+    @include media-md {
+        display: none;
+    }
+    box-shadow: 0 03px 3px rgba(239,123,27,.1);
+}
+
+#top.hide {
+	top: -90px;
+}
+
+.header-inner {
+    display: flex;
+    height: 90px;
+    padding: 20px 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1 1 0%;
+}
+
+.main-logo {
+    max-height: 56px;
+    max-width: 100%;
+}
+
+.header-buttons {
+    display: flex;
+    margin-left: 10px;
+}
+
+.btn.contact {
+    line-height: 37px;
+    height: 56px;
+    margin-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    &:hover {
+        background-color: $secondary-colour;
+    }
+}
+
+/* --------------- Burger Menu --------------- */
+
+.btn.burger {
+    color: $white;
+    height: 56px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+.burger-inner {
+    position: relative;
+    display: block;
+    width: 33px;
+    margin: 0 auto;
+}
+
+.burger-lines {
+    width: 33px;
+    height: 3px;
+    background-color: $white;
+    display: block;
+    position: absolute;
+    top: -9px;
+    @include burger-pseudo-lines;
+}
+

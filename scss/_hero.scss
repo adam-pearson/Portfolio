@@ -1,0 +1,96 @@
+.hero.container {
+    height: calc(100vh - 90px);
+    position: relative;
+    @include media-md {
+        height: 100vh;
+    }
+}
+
+/* Animated gradient background, positioned with z-index */
+
+.grad-background {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include gradient-anim;
+    mix-blend-mode: color;
+    opacity: .15;
+    z-index: 2;
+    @include media-ie {
+        opacity: .2;
+    }
+
+}
+
+/* internal hero container, with bg image */
+
+.hero-inner {
+    height: calc(100vh - 90px);
+    text-align: center;
+    display: block;
+    background: url(../resources/img/hero-image-min.jpg);
+    background-size: cover;
+    @include media-md {
+        height: 100vh;
+    }
+}
+
+.hero-content {
+    @include centred;
+    width: 95%;
+    color: $primary-colour;
+    z-index: 3;
+    h1, h2 {
+        color: $primary-colour;
+        text-shadow: 1px 1px 3px rgba(0,0,0,1);
+    }
+    .Typewriter__wrapper {
+        h1 {
+            line-height: 4rem;
+        }
+        h2 {
+             line-height: 2.5rem;
+        }
+        
+    }
+    h1 {
+        @include media-lg {
+            font-size: 4rem;
+            color: $primary-colour;
+        }
+    }
+    h2 {
+        @include media-lg {
+            font-size: 2.5rem;
+            color: $primary-colour;
+        }
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.scroll {
+    color: $primary-colour;
+    &:hover p, &:hover i {
+        color: $white;
+    }
+    &:hover i {
+        @include fade-in;
+    }
+    p, i {
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,1);
+        transition: 150ms;
+    }
+}
+
+
