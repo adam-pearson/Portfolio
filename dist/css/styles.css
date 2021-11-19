@@ -1106,7 +1106,7 @@ select:-webkit-autofill:focus {
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-3 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(17, 19, 37, 0.8) 65%), url("/dist/assets/img/axure_project.jpeg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(17, 19, 37, 0.8) 65%), url("/dist/assets/img/weather_app_min.png");
   background-size: cover;
 }
 .project .project-image-contain .project-image.background-4 {

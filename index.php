@@ -54,14 +54,14 @@
                 </a>
             </li>
             <li class="project card-3">
-                <a class="project-link" target="_blank" href="https://spiaa4.axshare.com/#id=h50q68&p=store_page">
+                <a class="project-link" target="_blank" href="https://weather.adampearson.design">
                     <div class="project-image-contain">
                         <div class="project-image background-3"></div>
                     </div>
                 </a>
-                <a class="project-links" target="_blank" href="https://spiaa4.axshare.com/#id=h50q68&p=store_page">
+                <a class="project-links" target="_blank" href="https://weather.adampearson.design">
                     <div class="video-grad"></div>
-                    <h2>Ecommerce Prototype</h2>
+                    <h2>React Weather App</h2>
                     <h3 class="strapline">View Project <i class="fas fa-arrow-right"></i></h3>
                     <div class="text-background"></div>
                 </a>
